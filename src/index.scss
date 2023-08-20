@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+p, h1, h2, h3, h4, h5, span, a{
+  color: white;
+}
+.presentation_details h1{
+  font-family: 'Moirai One', cursive;
+  font-size: 5rem;
+  margin: 0;
+  line-height: 1;
+}
+

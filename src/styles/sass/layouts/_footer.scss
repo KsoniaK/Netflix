@@ -1,0 +1,37 @@
+footer{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  // margin-bottom: 4rem;
+  .social-media img{
+    width: 1.5rem;
+    filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+    padding-right: 2rem;
+  }
+  .mentions-footer{
+    display: flex;
+    justify-content: space-between;
+    & ul{
+      padding: 0;
+      & li{
+        list-style: none;
+        color: gray;
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    & button{
+      cursor: pointer;
+      background-color: black;
+      color: gray;
+      border: 1px solid;
+      padding: 0.3rem;
+    }
+    & p{
+      color: gray;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+  .categories{
+    border: 2px solid sandybrown;
+    display: flex;
+    overflow-y: hidden;
+    position: relative;
+    .carousel-arrow{
+      background: hsla(0,0%,8%,.5);
+      position: absolute;
+      height: 100%;
+      z-index: 20;
+      & img{
+        width: 3rem;
+        filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+        top: 30%;
+        position: relative;
+        cursor: pointer;
+      }
+    }
+    .category{
+      border: 2px solid royalblue;
+      &_container{
+        & img{
+          height: 130px;
+          width: 250px;
+          object-fit: cover;
+          padding-right: 0.5rem;
+          cursor: pointer;
+          // transition: transform 0.3s ease-in-out;
+        }
+        // &:hover{
+        //   transform: scale(1.1);
+        // }
+      }
+      .card-actions{
+        border: 2px solid palevioletred;
+        display: flex;
+        .play-add-like{
+          display: flex;
+        }
+        img{
+        border: 1px solid darkslategrey;
+        border-radius: 2rem;
+        padding: 0.6rem;
+        width: 1rem;
+        filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+        }
+      }
+    }
+  }
+

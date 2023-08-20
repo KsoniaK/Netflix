@@ -1,0 +1,36 @@
+// section profil
+.profils{
+  // border: 2px solid blue;
+  display: flex;
+  justify-content: space-around;
+  .profil{
+    // border: 2px solid greenyellow;
+    cursor: pointer;
+    &-img{
+      border: 2px solid transparent;
+      height: 10vw;
+      width: 10vw;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    h2{
+      color: grey;
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin: 0.5rem;
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+  &:hover{
+    .profil-img{
+      border: 2px solid white;
+      background-color: white;
+    }
+    h2{
+      color: white;
+    }
+  }
+}
+// ajout user

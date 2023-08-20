@@ -1,0 +1,92 @@
+.header_accueil{
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+};
+main{
+  border: 2px solid aquamarine;
+  .presentation{
+    border: 2px solid fuchsia;
+    position: relative;
+    &-bg{
+      width: 100%;
+      height: 74vh;
+      object-fit: cover;
+    }
+    &_replay-infos{
+      position: absolute;
+      bottom: 35%;
+      right: 0%;
+      width: 10%;
+      align-items: center;
+      display: flex;
+      & button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        & img{
+          border: 1px solid darkslategrey;
+          border-radius: 2rem;
+          padding: 0.6rem;
+          width: 1.1rem;
+          margin-right: 1rem;
+          filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+          &:hover{
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+      & span{
+        border-left: 3px solid #dcdcdc;
+        width: 100%;
+        background-color: rgba(51,51,51,.6);
+        padding: 0.3rem;
+      }
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3rem;
+      position: absolute;
+      bottom: 0%;
+      background: linear-gradient(180deg, rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.5), #111);
+    }
+  }
+  .categories-container{
+    padding: 0 0 0 4%;
+    &:hover .right{
+      display: flex;
+    }
+    // &:hover + .carousel-arrow{
+    //   display: flex;
+    // }
+    & h2{
+      margin: 0;
+    }
+    .carousel-arrow{
+      position: absolute;
+      bottom: 4%;
+      z-index: 20;
+      width: 5%;
+      height: 17%;
+      background: hsla(0, 0%, 8%, 0.5);
+      display: none;
+      cursor: pointer;
+      & img{
+        width: 2rem;
+        filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+        align-self: center;
+        left: 30%;
+        position: absolute;
+      }
+    }
+    .left{
+      left: 1%;
+    }
+    .right{
+      right: 0%;
+    }
+  }
+}
