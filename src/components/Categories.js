@@ -1,49 +1,39 @@
-import React, {useState, useEffect} from 'react';
 import "../styles/sass/components/_categories.scss";
-import data from "../data/data.json";
-import imgPlay from "../styles/img/play.png";
-import imgAdd from "../styles/img/add.png";
-import imgLike from "../styles/img/like.png";
-import imgMore from "../styles/img/more.png";
 
-function Categories({title}){
-  const [projets, setMovies] = useState([]);
+function Categories({media, categorie}){
+  const mediaContainer = document.getElementById('media_container');
+
+  function OpenMedia(){
+    mediaContainer.style.display = "block";
+  };
+
+      // Afficher les infos de l'image cliquée
+      function ShowMedia() {
+        // Récupérer id image cliquée
+        const imgsCategoryClicked = Array.from(document.getElementsByTagName('img'));
+        let idImgClicked = [];
+        
+        imgsCategoryClicked.map(imgCategoryClicked =>(
+          idImgClicked = console.log("data-id de l'image cliquée est " + imgCategoryClicked.getAttribute('data-id'))
+        ));
+
+        // Récupérer id de la div modal
+        const imgsModal = Array.from(document.getElementsByTagName('img'));
+        let idImgModal = [];
+    
+        imgsModal.map(imgModal =>(
+          idImgModal = console.log("data-id de l'image à afficher est " + imgModal.getAttribute('data-id'))
+        ));
+      };
   
-  useEffect(() =>{
-    setMovies(data.projets);
-  }, []);
-
-    const leftArrow = document.querySelector('.left');
-    const rightArrow = document.querySelector('.right');
-
-    // leftArrow.addEventListener('click', function(){
-    //   console.log('cliqué à gauche');
-    // })
-    // rightArrow.addEventListener('click', function(){
-    //   console.log('cliqué à droite');
-    // });
-
-  return(
-    <>
-      <h2>{title}</h2>
-      {projets.map((projet, index) =>(
-        <article key={index} className='category'>
-          <div className='category_container'>
-            <img className='img-projet' src={projet.pictureCategory} alt='illustration'/>
-          </div>
-          {/* <div className='card-actions'>
-            <div className='play-add-like'>
-              <img src={imgPlay} alt='lecture'/>
-              <img src={imgAdd} alt='add'/>
-              <img src={imgLike} alt='like'/>
+  if(categorie.id === media.id){
+    return(
+      <>
+            <div data-id={media.mediaId} className='category_container' onClick={ShowMedia}>
+              <img data-id={media.mediaId} className='img-projet' src={media.pictureCategory} alt='illustration' onClick={OpenMedia}/>
             </div>
-            <div className='see-more'>
-              <img src={imgMore} alt='see more'/>
-            </div>
-          </div> */}
-      </article>
-      ))}
-    </>
-  )
+      </>
+    )
+  }
 }
 export default Categories;

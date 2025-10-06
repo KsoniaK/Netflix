@@ -37,28 +37,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// function App() {
-
-//   return (
-//     <>
-//       <Helmet>
-//         <meta charSet="utf-8" />
-//         <title>Portfolio</title>
-//         <link rel="canonical" href="http://mysite.com/example" />
-//         <meta name="description" content="portfolio" />
-//       </Helmet>
-//       <Routes>
-//         <Route path='/' element={<Logo/>}/>
-//         <Route path='/profil' element={<Profil/>}/>
-//         <Route path='/accueil' element={<Accueil/>} />
-//         <Route path="/*" element={<Navigate to="/404" replace/>} />
-//         <Route path="/404" excat={true} element={<Error/>} />
-//       </Routes>
-//     </>
-//   );
-// }
-
-// export default App;

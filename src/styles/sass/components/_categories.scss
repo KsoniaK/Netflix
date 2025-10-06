@@ -3,6 +3,13 @@
     display: flex;
     overflow-y: hidden;
     position: relative;
+    margin-bottom: 2rem;
+    & h2{
+      // font-family: "Moirai One", cursive;
+      position: absolute;
+      bottom: 15%;
+      left: 4%;
+    }
     .carousel-arrow{
       background: hsla(0,0%,8%,.5);
       position: absolute;
@@ -19,17 +26,18 @@
     .category{
       border: 2px solid royalblue;
       &_container{
+        position: relative;
         & img{
           height: 130px;
           width: 250px;
           object-fit: cover;
           padding-right: 0.5rem;
           cursor: pointer;
-          // transition: transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
         }
-        // &:hover{
-        //   transform: scale(1.1);
-        // }
+        &:hover{
+          transform: scale(1.1);
+        }
       }
       .card-actions{
         border: 2px solid palevioletred;

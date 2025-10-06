@@ -11,32 +11,35 @@ main{
     position: relative;
     &-bg{
       width: 100%;
-      height: 74vh;
+      height: 77vh;
       object-fit: cover;
     }
     &_replay-infos{
       position: absolute;
-      bottom: 35%;
+      bottom: 45%;
       right: 0%;
       width: 10%;
       align-items: center;
       display: flex;
-      & button{
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
+      // & button{
+      //   background-color: transparent;
+      //   border: none;
+      //   cursor: pointer;
+        & a{
+          width: 70%;
+        }
         & img{
-          border: 1px solid darkslategrey;
+          border: 1px solid white;
           border-radius: 2rem;
-          padding: 0.6rem;
-          width: 1.1rem;
+          padding: 0.4rem;
+          width: 40%;
           margin-right: 1rem;
-          filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+          cursor: pointer;
           &:hover{
             background-color: rgba(255, 255, 255, 0.1);
           }
         }
-      }
+      // }
       & span{
         border-left: 3px solid #dcdcdc;
         width: 100%;
@@ -59,18 +62,19 @@ main{
     &:hover .right{
       display: flex;
     }
-    // &:hover + .carousel-arrow{
-    //   display: flex;
-    // }
+    &:hover .left{
+      display: flex;
+    }
     & h2{
-      margin: 0;
+      margin-top: 0;
+      margin-bottom: .7rem;
+      font-size: 1.3rem;
     }
     .carousel-arrow{
       position: absolute;
-      bottom: 4%;
-      z-index: 20;
+      bottom: 0%;
+      z-index: 2;
       width: 5%;
-      height: 17%;
       background: hsla(0, 0%, 8%, 0.5);
       display: none;
       cursor: pointer;
@@ -81,9 +85,9 @@ main{
         left: 30%;
         position: absolute;
       }
-    }
-    .left{
-      left: 1%;
+      // &:hover{
+      //   display: flex;
+      // }
     }
     .right{
       right: 0%;

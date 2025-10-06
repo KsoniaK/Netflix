@@ -1,0 +1,100 @@
+.media_container{
+  display: none;
+  border: 2px solid cornflowerblue;
+  width: 850px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  #media_modal{
+    // display: none;
+    // border: 2px solid cornflowerblue;
+    // // position: relative;
+    // width: 850px;
+    // // margin-left: auto;
+    // // margin-right: auto;
+    // position: fixed;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    .div-media-img{
+      .media-bg{
+        height: 60vh;
+      }
+    }
+    .closeModal-div{
+      border: 2px solid transparent;
+      top: 3%;
+      right: 3%;
+      position: absolute;
+      height: 15px;
+      padding: 10px;
+      width: 15px;
+      border-radius: 75%;
+      background-color: black;
+      .closeModal{
+        filter: invert(98%) sepia(63%) saturate(252%) hue-rotate(224deg) brightness(118%) contrast(100%);
+        width: 100%;
+        cursor: pointer;
+      }
+      &:hover{
+      border: 2px solid white;
+      }
+    }
+    .div-media_details{
+      position: absolute;
+      top: 40%;
+      left: 5%;
+      .logo-modal{
+        width: .5rem;
+      }
+      .span-modal{
+        font-size: .6rem;
+      }
+      & h1{
+        margin-top: 0;
+      }
+      .like-button_media{
+        border-radius: 50%;
+        width: 0%;
+        height: 45px;
+        background-color: black;
+        border: 2px solid hsla(0,0%,100%,.5);
+        padding: 1.5rem;
+        & img{
+          filter: invert(100%) sepia(15%) saturate(0%) hue-rotate(7deg) brightness(102%) contrast(102%);
+          padding-right: 0;
+        }
+        &:hover{
+          border: 2px solid white;
+        }
+      }
+    }
+    .div-media_description{
+      margin-left: 3rem;
+      display: flex;
+      .resume{
+        width: 50%;
+      }
+      .tags{
+        width: 50%;
+        text-align: center;
+        & p{
+          color: grey;
+        }
+      }
+    }
+    &::after{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3rem;
+      position: absolute;
+      bottom: 13%;
+      background: linear-gradient(180deg, rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.5), #111);
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

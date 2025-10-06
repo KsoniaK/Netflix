@@ -1,129 +1,99 @@
 import React, {useState, useEffect} from 'react';
 import data from "../data/data.json";
 import Header from '../layouts/Header';
-import PresentationDetails from '../components/PresentationDetails';
+import AccueilDetails from '../components/AccueilDetails';
 import Categories from '../components/Categories';
+import Description from '../components/Description';
 import Footer from '../layouts/Footer';
 import '../styles/sass/pages/_accueil.scss';
-import imgSound from '../styles/img/sound.png';
+import imgReact from '../styles/img/React-icon.png';
 import leftArrow from "../styles/img/left-arrow.png";
 import rightArrow from "../styles/img/right-arrow.png";
-// import imageAccueil from '../styles/img/image-accueil.webp';
-// import imgSoundOff from '../styles/img/soundOff.png';
-// import imgReplay from '../styles/img/replay.png';
-
-
-
-// function Accueil() {
-//   const [movies, setMovies] = useState([]);
-  
-//   useEffect(() =>{
-//     setMovies(data.movies);
-//   }, []);
-
-//   console.log(movies);
-
-//   const randomPictures = Math.floor(Math.random() * movies.length);
-//   // console.log(randomPictures);
-
-//   return (
-//     <>
-//       <header id="header_accueil" className='header_accueil'>
-//         <Nav/>
-//       </header>
-//       <main className='main'>
-//         {/* présentation */}
-//         <section className='presentation'>
-//           {/* image d'accueil */}
-//           <div>
-//             {movies.map((movie, index) =>(
-//               <img key={index} className='presentation-bg' src={movie.picture} alt='illustration accueil'/>
-//             ))}
-//             {/* détails */}
-//             <div className='presentation_details'>
-//               <PresentationDetails movies={movies}/>
-//             </div>
-//           </div>
-//         </section>
-//         {/* replay / infos */}
-//         <div className='presentation_replay-infos'>
-//           <button >
-//             <img src={imgSound} alt='couper le son / rejouer'/>
-//           </button>
-//           <span>10+</span>
-//         </div>
-//         {/* catégories */}
-//         <h2>Projets</h2>
-//         <section className='categories'>
-//           <Categories movies={movies}/>
-//         </section>
-//       </main>
-//     </>
-//   );
-// }
-// export default Accueil;
-
-
-
+import { Link } from 'react-router-dom';
 
 function Accueil() {
-  const [projets, setMovies] = useState([]);
+  const [medias, setMedias] = useState([]);
   const [categories, setCategories] = useState([]);
-  
+  const [imgAccueil, setImgAccueil] = useState([]);
+
   useEffect(() =>{
-    setMovies(
-      data.projets[
-        Math.floor(Math.random() * projets.length)
-      ]
+    setMedias(
+      data.projets.medias
     );
   }, []);
-  // console.log(projets);
 
   useEffect(() =>{
     setCategories(
-        data.categories
+      data.projets.categories
     );
   }, []);
-  // console.log(categories);
+  
+  useEffect(() =>{
+    setImgAccueil(
+      data.projets.medias[
+        Math.floor(Math.random() * data.projets.medias.length - 1)
+      ]
+    );
+  }, []);
+
+  
+  function CarouselRightArrow(){
+    console.log('cliqué à droite');
+  };
+
+  function CarouselLeftArrow(){
+    console.log('cliqué à gauche');
+  };
 
   return (
     <>
       <header id="header_accueil" className='header_accueil'>
-        <Header categories={categories}/>
+        <Header/>
       </header>
       <main className='main'>
         {/* présentation */}
         <section className='presentation'>
           {/* image d'accueil */}
           <div className='presentation-bg'>
-              <img className='presentation-bg' src={projets?.picture} alt='illustration accueil'/>
+              <img className='presentation-bg' src={imgAccueil?.picture} alt='illustration accueil'/>
             {/* détails */}
             <div className='presentation_details'>
-              <PresentationDetails projets={projets}/>
+                <article>
+                  <AccueilDetails imgAccueil={imgAccueil}/>
+                </article>
             </div>
           </div>
         </section>
         {/* replay / infos */}
         <div className='presentation_replay-infos'>
-          <button >
-            <img src={imgSound} alt='couper le son / rejouer'/>
-          </button>
-          <span>{projets.age}</span>
+          <Link to={"https://fr.legacy.reactjs.org/"} target='_blank'>
+          <img className='img-react' src={imgReact} alt='documentation react'/>
+          </Link>
+          <span>{imgAccueil?.age}</span>
         </div>
         {/* catégories */}
-        <div className='categories-container'>
-          <div className='carousel-arrow left'>
-            <img src={leftArrow} alt='précédent'/>
-          </div>
+        {categories.map((categorie, index) =>(
+        <div className='categories-container' key={index}>
+            <h2>{categorie.name}</h2>
           <section className='categories'>
-            {categories.map((categorie, key) => (
-              <Categories title={categorie.title}/>
+            <div className='carousel-arrow left'>
+              <img src={leftArrow} alt='précédent' onClick={CarouselLeftArrow}/>
+            </div>
+            <div className='carousel-arrow right'>
+              <img src={rightArrow} alt='suivant' onClick={CarouselRightArrow}/>
+            </div>
+            {medias.map((media, index) =>(
+              <section key={index}>
+                <article className='category'>
+                  <Categories media={media} categorie={categorie}/>
+                </article>
+              </section>
             ))}
           </section>
-          <div className='carousel-arrow right'>
-            <img src={rightArrow} alt='suivant'/>
-           </div>
         </div>
+          ))}
+          {/* Media modal */}
+          <Description medias={medias}/>
       </main>
         {/* footer */}
       <footer>

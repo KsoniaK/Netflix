@@ -3,12 +3,12 @@ import { HashLink as Link } from 'react-router-hash-link';
 import "../styles/sass/layouts/_header.scss";
 import logo from "../styles/img/logo.png";
 import search from "../styles/img/search.png";
-import notification from "../styles/img/notification.png";
-import profil from "../styles/img/imgProfil.png";
+import like from "../styles/img/like.png";
+import profil from "../styles/img/imgProfil.jpg";
 import phone from "../styles/img/phone.png";
 import email from "../styles/img/email.png";
 import gitHub from "../styles/img/github.png";
-import arrow from "../styles/img/arrow.png";
+import more from "../styles/img/more.png";
 
 function Header({categories}){
   // scroll
@@ -26,31 +26,12 @@ function Header({categories}){
   };
 
   // faire apparaître le détail du panneau de configuration dans le header
-  const divToolsDetails = document.querySelector(".nav_tools");
-
-  // function Test(){
-  //   divToolsDetails.addEventListener("click", function(){
-  //   console.log("cliqué");
-  // });
-
-  // divToolsDetails.addEventListener("click", (e)=>{
-  //   console.log("cliqué");
-  // });
-  // }
-  // Test();
-
-
-  // // Barre de recherche
-  // // Faire apparaître la barre de recherche
-  // const searchingLoupe = document.getElementById('searchingLoupe');
-  // console.log(searchingLoupe);
-  // const searchInput = document.getElementById('search_input');
-  // console.log(searchInput);
-
-  // searchingLoupe.addEventListener('click', ()=>{
-  //   searchInput.classList.add = 'active';
-  //   console.log('cliqué');
-  // });
+  // Barre de recherche
+  const searchInput = document.getElementById('search_input');
+  // Faire apparaître la barre de recherche
+  function Research(){
+    searchInput.style.display = 'block';
+  };
 
   return(
     <section className="nav_container">
@@ -61,30 +42,27 @@ function Header({categories}){
       </Link>
       <nav className="nav">
         <ul className="nav_menu">
-            {/* {categories?.map((categorie, index) =>(
-              <li className="nav_name" key={index}>{categorie.title}</li>
-            ))} */}
             <Link to={'/accueil'}>
               <li className="nav_name">Accueil</li>
-            </Link>
-            <Link to={'/accueil/#html-css-sass'}>
-              <li className="nav_name">Projets</li>
-            </Link>
-            <Link to={'/accueil/#javascript'}>
-              <li className="nav_name">Favoris</li>
-            </Link>
+              </Link>
+              <Link to={'https://github.com/KsoniaK?tab=repositories'} target="_blank">
+              <li className="nav_name">GitHub</li>
+              </Link>
+              <Link to={'mailto:kechiteu@gmail.com'} target="_blank">
+              <li className="nav_name">Mail</li>
+              </Link>
         </ul>
         <div className="nav_profil">
           <div className="nav_search">
             <input id="search_input" type="text" name="research" placeholder="Titre, technologie" src={search}/>
-            <img id="searchingLoupe" className="nav_profil-img" src={search} alt="search"/>
           </div>
-          <img className="nav_profil-img" src={notification} alt="notification"/>
+          <img id="searchingLoupe" className="nav_profil-img" src={search} alt="search" onClick={Research}/>
+          <img className="nav_profil-img" src={like} alt="likes compteur"/>
+          <p>Likes: 0</p>
           <div className="nav_tools">
             <img src={profil} alt="profil"/>
-            <img className="nav_tools-img" src={arrow} alt="arrow"/>
+            <img className="nav_tools-img" src={more} alt="more"/>
           </div>
-        </div>
         <div className="nav_tools-details">
             <ul>
               <li className="tools-li">
@@ -103,6 +81,7 @@ function Header({categories}){
             <div className="connexion_nature">
               <Link to={'/profil'}>Se déconnecter</Link>
             </div>
+        </div>
         </div>
       </nav>
     </section>

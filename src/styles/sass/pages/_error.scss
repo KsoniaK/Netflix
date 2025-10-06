@@ -1,0 +1,55 @@
+.error-header{
+  padding: 1rem;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  & img{
+    width: 7rem;
+  }
+}
+.error-section{
+  height: 92vh;
+  overflow: hidden;
+  .error-contenu{
+    position: absolute;
+    z-index: 2;
+    left: 20%;
+    top: 25%;
+    text-align: center;
+    & h1{
+      font-size: 4em;
+    }
+    & p{
+      font-size: 1.3em;
+    }
+    & button{
+      cursor: pointer;
+      padding: 1rem;
+      border-radius: 4px;
+      background-color: white;
+      border-style: none;
+      -webkit-text-stroke-width: thin;
+      margin-bottom: 4rem;
+      &:hover{
+        opacity: .8;
+      }
+    }
+    & span{
+      font-size: 1.8em;
+      font-weight: 200;
+      border-left: 1px solid red;
+      padding-left: 1rem;
+      // margin-bottom: 4rem;
+      &:last-child{
+        font-size: 1em;
+        border: none;
+        // margin-bottom: 0rem;
+      }
+    }
+  }
+  .error-img{
+    position: relative;
+    width: 100%;
+    opacity: .5;
+  }
+}

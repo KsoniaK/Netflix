@@ -13,30 +13,41 @@ function Footer() {
         <Link to={'mailto:kechiteu@gmail.com'} target="_blank">
           <img src={email} alt='email'/>
         </Link>
+        <Link to={'tel:0783679676'} target="_blank">
           <img src={phone} alt='phone'/>
+        </Link>
+        <Link to={'https://github.com/KsoniaK?tab=repositories'} target="_blank">
           <img src={gitHub} alt='gitHub'/>
+        </Link>
         </div>
       <section className='mentions-footer'>
         <div>
           <ul>
-            <li>contenu</li>
+            <li>React / Node</li>
           </ul>
+         <Link to={'https://github.com/KsoniaK/PortfolioNetflix'} target="_blank">
           <button>Git repository</button>
-          <p>© 2023 Portfolio</p>
+          </Link>
+          <p>© 2025 Portfolio, Inc</p>
         </div>
         <div>
           <ul>
-              <li>contenu</li>
+              <li>Javascript</li>
             </ul>
         </div>
         <div>
           <ul>
-            <li>contenu</li>
+            <li>HTML / CSS / SASS</li>
             </ul>
         </div>
         <div>
           <ul>
-            <li>contenu</li>
+            <li>CMS</li>
+            </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Gestion de projet</li>
             </ul>
         </div>
       </section>
