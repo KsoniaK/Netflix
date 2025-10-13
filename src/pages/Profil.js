@@ -7,16 +7,14 @@ import '../styles/style.scss'
 
 function Profil({users}){
 
-  return(
+  return(    
     <main className="main-profil">
-      
-        <section className='profil-container'>
-          <h1 className="main-profil-h1">Portfolio de ?</h1>
-          <UserLogin users={users}/>
-          {/* Lien ne marche pas */}
-            <Link to={'/logo'}>
-              <button className='main-profil-button'>Accueil</button>
-            </Link>
+          <section className='profil-container'>
+            <h1 className="main-profil-h1">Portfolio de ?</h1>
+              <UserLogin users={users}/>
+              <Link to={'/'}>
+                <button className='main-profil-button'>Accueil</button>
+              </Link>
         </section>
     </main>
   )

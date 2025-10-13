@@ -10,6 +10,7 @@ main{
     border: 2px solid fuchsia;
     position: relative;
     &-bg{
+      // filter: brightness(0.7);
       width: 100%;
       height: 77vh;
       object-fit: cover;

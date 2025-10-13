@@ -79,7 +79,7 @@ function Header({categories}){
               </li>
             </ul>
             <div className="connexion_nature">
-              <Link to={'/profil'}>Se déconnecter</Link>
+              <Link to={'/'}>Se déconnecter</Link>
             </div>
         </div>
         </div>

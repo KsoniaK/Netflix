@@ -1,0 +1,28 @@
+.login-profil_details{
+  & img{
+    filter: brightness(.3);
+    height: 99vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.login-description{
+    position: absolute;
+    top: 40%;
+    left: 21%;
+    text-align: center;
+    & h1{
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+    & span{
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    & p{
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-top: 2rem;
+    }
+}

@@ -10,19 +10,10 @@ function Categories({media, categorie}){
       // Afficher les infos de l'image cliquée
       function ShowMedia() {
         // Récupérer id image cliquée
-        const imgsCategoryClicked = Array.from(document.getElementsByTagName('img'));
-        let idImgClicked = [];
+        const imgsCategoryClicked = Array.from(document.getElementsByTagName('img'));        
         
         imgsCategoryClicked.map(imgCategoryClicked =>(
-          idImgClicked = console.log("data-id de l'image cliquée est " + imgCategoryClicked.getAttribute('data-id'))
-        ));
-
-        // Récupérer id de la div modal
-        const imgsModal = Array.from(document.getElementsByTagName('img'));
-        let idImgModal = [];
-    
-        imgsModal.map(imgModal =>(
-          idImgModal = console.log("data-id de l'image à afficher est " + imgModal.getAttribute('data-id'))
+          console.log("data-id de l'image cliquée est " + imgCategoryClicked.getAttribute('data-id'))
         ));
       };
   
@@ -35,5 +26,6 @@ function Categories({media, categorie}){
       </>
     )
   }
+
 }
 export default Categories;

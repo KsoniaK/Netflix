@@ -9,10 +9,10 @@ function AccueilDetails({imgAccueil}){
     return(
               <>
               {/* nom */}
-              <div className='presentation_details-developpeur-name'>
-                <img src={logoLettre} alt='Logo initial "p"'/>
-                  <span>Sonia KECHIT</span>
-              </div>
+                <div className='presentation_details-developpeur-name'>
+                  <img src={logoLettre} alt='Logo initial "p"'/>
+                      <span>Sonia KECHIT</span>
+                </div>
                 <div>
                   {/* titre */}
                   <h1>{imgAccueil?.title}</h1>

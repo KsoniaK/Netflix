@@ -1,0 +1,32 @@
+.login-header{
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+    .nav-login{
+      justify-content: space-between;
+      position: absolute;
+      width: 80%;
+      padding-top: 1.4rem;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.8000) 0.000%, rgba(0, 0, 0, 0.7889) 8.333%, rgba(0, 0, 0, 0.7556) 16.67%, rgba(0, 0, 0, 0.7000) 25.00%, rgba(0, 0, 0, 0.6222) 33.33%, rgba(0, 0, 0, 0.5222) 41.67%, rgba(0, 0, 0, 0.4000) 50.00%, rgba(0, 0, 0, 0.2778) 58.33%, rgba(0, 0, 0, 0.1778) 66.67%, rgba(0, 0, 0, 0.1000) 75.00%, rgba(0, 0, 0, 0.04444) 83.33%, rgba(0, 0, 0, 0.01111) 91.67%, rgba(0, 0, 0, 0.000) 100.0%);
+        .nav_logo{
+          & img{
+            width: 100%;
+          }
+        }
+        & button{
+          background-color: #E50815;
+          border-radius: 4px;
+          padding-left: 1.1rem;
+          padding-right: 1.1rem;
+          padding-top: .5rem;
+          padding-bottom: .5rem;
+          cursor: pointer;
+          border: none;
+          margin-right: 0.5rem;
+          color: white;
+          font-weight: bold;
+          font-size: initial;
+        }
+      }
+}

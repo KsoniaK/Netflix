@@ -12,7 +12,7 @@ function UserLogin({users}){
             <Link to={"/accueil"}>
             <img className='profil-img' id='img-profil' src={imageProfil} alt='ajouter un profil'/>
               {users?.map((user, index) =>(
-                <h2 key={index} id={user.id}>{user.name}</h2>
+                <h2 key={index} id={user.id}>{user.name} {user.lastName}</h2>
               ))}
             </Link>
           </div>

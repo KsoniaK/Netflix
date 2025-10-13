@@ -28,7 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Logo />} />
         <Route path='/profil' element={<Profil users={datas.users} />} />
-        <Route path='/accueil' element={<Accueil datas={datas}/>} />
+        <Route path='/accueil' element={<Accueil datas={datas} />} />
         <Route path="/*" element={<Navigate to="/404" replace />} />
         <Route path="/404" excat={true} element={<Error />} />
       </Routes>

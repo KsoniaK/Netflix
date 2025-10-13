@@ -72,9 +72,8 @@ function Accueil() {
           <span>{imgAccueil?.age}</span>
         </div>
         {/* catégories */}
-        {categories.map((categorie, index) =>(
-        <div className='categories-container' key={index}>
-            <h2>{categorie.name}</h2>
+        <div className='categories-container'>
+            <h2>Projet</h2>
           <section className='categories'>
             <div className='carousel-arrow left'>
               <img src={leftArrow} alt='précédent' onClick={CarouselLeftArrow}/>
@@ -84,14 +83,15 @@ function Accueil() {
             </div>
             {medias.map((media, index) =>(
               <section key={index}>
-                <article className='category'>
-                  <Categories media={media} categorie={categorie}/>
+                <article className='category' key={index}>
+                  {categories.map((categorie, index) =>(
+                    <Categories media={media} categorie={categorie} key={index}/>
+                  ))}
                 </article>
               </section>
             ))}
           </section>
         </div>
-          ))}
           {/* Media modal */}
           <Description medias={medias}/>
       </main>

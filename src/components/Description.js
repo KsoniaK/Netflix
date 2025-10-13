@@ -12,7 +12,6 @@ function Description({medias}){
     mediaContainer.style.display = "none"
   };
 
-
   // Afficher le bon média pour la fiche détaillée
   // SI mediaID === data-id ALORS on afficheƒ
   return(
