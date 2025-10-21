@@ -38,7 +38,8 @@
         "pictureCategory": "/imgProjets/gameOn_category.png",
         "resume": "GameOn est une entreprise spécialisée dans les conférences et les concours de jeux. Pour ce projet, je devais reprendre la main sur un projet en cours. Jason, le développeur Front-End en charge du projet",
         "tags": ["html", "css", "js"],
-        "age": "3+"
+        "age": "3+",
+        "url": "https://github.com/KsoniaK/GameOn-website-FR.git"
       },
       {
         "mediaId": 2,
@@ -48,7 +49,9 @@
         "pictureCategory": "/imgProjets/wfg_category.png",
         "resume": "Création d'un site pour le projet de fin de stage d'Intégratrice web. WebForceGame est un site permettant aux personnes seules (ou non) de jouer en ligne !",
         "tags": ["html", "css", "js"],
-        "age": "4+"
+        "age": "4+",
+        "url": "https://github.com/KsoniaK/Web-force-game.git"
+
       },
       {
         "mediaId": 3,
@@ -58,7 +61,9 @@
         "pictureCategory": "/imgProjets/plsAvocat_category.png",
         "resume": "Création d'un site vitrine pour un cabinet d'avocats",
         "tags": ["html", "css", "js"],
-        "age": "5+"
+        "age": "5+",
+        "url": "https://www.pls-avocat.fr/"
+
       },
       {
         "mediaId": 4,
@@ -68,7 +73,9 @@
         "pictureCategory": "/imgProjets/disney_category.png",
         "resume": "Reproduction du site Disney chanel !",
         "tags": ["html", "css", "js"],
-        "age": "6+"
+        "age": "6+",
+        "url": "https://github.com/KsoniaK/projet_disney.git"
+
       },
       {
         "mediaId": 5,
@@ -78,7 +85,8 @@
         "pictureCategory": "/imgProjets/fishEye_category.png",
         "resume": "FishEye. FishEye est un site web qui permet aux photographes indépendants de présenter leurs meilleurs travaux. Notre objectif est de construire un prototype fonctionnel d'un nouveau site web",
         "tags": ["html", "css", "js"],
-        "age": "7+"
+        "age": "7+",
+        "url": "https://github.com/KsoniaK/SoniaKechit_6_09112021.git"
       },
       {
         "mediaId": 6,
@@ -88,7 +96,8 @@
         "pictureCategory": "/imgProjets/lesPetitsPlats_category.png",
         "resume": "Je suis freelance et je viens d’être missionnée par l’entreprise “Les petits plats” en temps que Développeuse Front-end. L’entreprise a décidé de réaliser son propre site de recettes de cuisine à l’instar de Marmiton ou 750g.",
         "tags": ["html", "css", "js"],
-        "age": "8+"
+        "age": "8+",
+        "url": "https://github.com/KsoniaK/SoniaKechit_7_09082022.git"
       },
       {
         "mediaId": 7,
@@ -98,7 +107,8 @@
         "pictureCategory": "/imgProjets/reservia_category.png",
         "resume": "L' entreprise décide de réaliser un prototype. La première étape consiste à intégrer la maquette responsive en HTML et CSS. Voici donc la tâche qui m’a été attribuée !",
         "tags": ["html", "css"],
-        "age":"1+"
+        "age":"1+",
+        "url": "https://github.com/KsoniaK/SoniaKechit_2_26052021.git"
       },
       {
         "mediaId": 8,
@@ -108,7 +118,8 @@
         "pictureCategory": "/imgProjets/ohMyFood_category.png",
         "resume": "Ohmyfood! est une entreprise de commande de repas en ligne. le site sera développé en utilisant l’approche mobile-first. Pour cette raison, seules des maquettes mobiles seront réalisées.",
         "tags": ["html", "css", "sass"],
-        "age": "2+"
+        "age": "2+",
+        "url": "https://github.com/KsoniaK/SoniaKechit_3_29062021.git"
       },
       {
         "mediaId": 9,
@@ -118,7 +129,8 @@
         "pictureCategory": "/imgProjets/kasa_category.png",
         "resume": "Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans. Elle souhaite une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté Back-end, et React côté Front-end",
         "tags": ["html", "css", "react"],
-        "age": "9+"
+        "age": "9+",
+        "url": "https://github.com/KsoniaK/Kechit_Sonia_Kasa_11-2022.git"
       },
       {
         "mediaId": 10,
@@ -128,7 +140,8 @@
         "pictureCategory": "/imgProjets/codingChalenge_category.png",
         "resume": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "tags": ["html", "css", "react", "node"],
-        "age": "10+"
+        "age": "10+",
+        "url": "https://github.com/KsoniaK/coding_challenge.git"
       },
       {
         "mediaId": 11,
@@ -138,7 +151,8 @@
         "pictureCategory": "/imgProjets/oqtf_category.png",
         "resume": "Création d'un site vitrine pour une entreprise spécialisée dans l'accompagnement en droit des étrangers",
         "tags": ["cms", "wordpress"],
-        "age": "11+"
+        "age": "11+",
+        "url": "https://oqtf-plsavocat.fr/"
       },
       {
         "mediaId": 12,
@@ -148,7 +162,8 @@
         "pictureCategory": "/imgProjets/learnHome_category.png",
         "resume": "LearnHome est une association qui met en relation des enfants en diﬃculté scolaire avec des tuteurs bénévoles. Elle souhaite travailler avec nous sur toute la conception de son site web",
         "tags": ["maquette", "diagramme", "user stories", "kanban"],
-        "age": "12+"
+        "age": "12+",
+        "url": "https://docs.google.com/presentation/d/15LT_YXWI1U84Wj92kUrmyleOATDjBwgqh4H7IHxhICU/edit?usp=sharing"
       }
     ]
   }

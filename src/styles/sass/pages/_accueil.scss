@@ -14,6 +14,9 @@ main{
       width: 100%;
       height: 77vh;
       object-fit: cover;
+      .presentation-bg-img{
+        filter: brightness(0.7);
+      }
     }
     &_replay-infos{
       position: absolute;

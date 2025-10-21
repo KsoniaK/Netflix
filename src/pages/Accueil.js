@@ -55,7 +55,7 @@ function Accueil() {
         <section className='presentation'>
           {/* image d'accueil */}
           <div className='presentation-bg'>
-              <img className='presentation-bg' src={imgAccueil?.picture} alt='illustration accueil'/>
+              <img className='presentation-bg presentation-bg-img' src={imgAccueil?.picture} alt='illustration accueil'/>
             {/* détails */}
             <div className='presentation_details'>
                 <article>
@@ -73,7 +73,7 @@ function Accueil() {
         </div>
         {/* catégories */}
         <div className='categories-container'>
-            <h2>Projet</h2>
+            <h2>Projets</h2>
           <section className='categories'>
             <div className='carousel-arrow left'>
               <img src={leftArrow} alt='précédent' onClick={CarouselLeftArrow}/>

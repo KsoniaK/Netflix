@@ -42,15 +42,15 @@ function Header({categories}){
       </Link>
       <nav className="nav">
         <ul className="nav_menu">
-            <Link to={'/accueil'}>
-              <li className="nav_name">Accueil</li>
-              </Link>
-              <Link to={'https://github.com/KsoniaK?tab=repositories'} target="_blank">
               <li className="nav_name">GitHub</li>
-              </Link>
-              <Link to={'mailto:kechiteu@gmail.com'} target="_blank">
+                <Link to={'https://github.com/KsoniaK?tab=repositories'} target="_blank">
+                </Link>
+                <Link to={'mailto:kechiteu@gmail.com'} target="_blank">
               <li className="nav_name">Mail</li>
-              </Link>
+                </Link>
+                <Link to={'tel:0783679676'}>
+              <li className="nav_name">Téléphone</li>
+                </Link>
         </ul>
         <div className="nav_profil">
           <div className="nav_search">
@@ -67,7 +67,7 @@ function Header({categories}){
             <ul>
               <li className="tools-li">
                 <img src={phone} alt="téléphone"></img>
-                <p href="phone">07.83.67.96.76</p>
+                  <Link to={'tel:0783679676'}>07.83.67.96.76</Link>
               </li>
               <li className="tools-li">
                 <img src={email} alt="email"></img>
