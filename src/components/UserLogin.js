@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/sass/components/_userLogin.scss'
 import imageProfil from '../styles/img/imgProfil.jpg'
 import { Link } from 'react-router-dom';

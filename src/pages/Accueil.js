@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
+import '../styles/sass/pages/_accueil.scss';
 import data from "../data/data.json";
 import Header from '../layouts/Header';
 import AccueilDetails from '../components/AccueilDetails';
 import Categories from '../components/Categories';
-import Description from '../components/Description';
+import Carrousel from '../components/Carrousel';
 import Footer from '../layouts/Footer';
-import '../styles/sass/pages/_accueil.scss';
 import imgReact from '../styles/img/React-icon.png';
 import leftArrow from "../styles/img/left-arrow.png";
 import rightArrow from "../styles/img/right-arrow.png";
@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 function Accueil() {
   const [medias, setMedias] = useState([]);
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
   const [imgAccueil, setImgAccueil] = useState([]);
 
   useEffect(() =>{
@@ -22,11 +22,11 @@ function Accueil() {
     );
   }, []);
 
-  useEffect(() =>{
-    setCategories(
-      data.projets.categories
-    );
-  }, []);
+  // useEffect(() =>{
+  //   setCategories(
+  //     data.projets.categories
+  //   );
+  // }, []);
   
   useEffect(() =>{
     setImgAccueil(
@@ -81,19 +81,13 @@ function Accueil() {
             <div className='carousel-arrow right'>
               <img src={rightArrow} alt='suivant' onClick={CarouselRightArrow}/>
             </div>
-            {medias.map((media, index) =>(
-              <section key={index}>
-                <article className='category' key={index}>
-                  {categories.map((categorie, index) =>(
-                    <Categories media={media} categorie={categorie} key={index}/>
-                  ))}
-                </article>
+              <section id='liste-media'>
+                    <Categories medias={medias}/>
               </section>
-            ))}
           </section>
         </div>
           {/* Media modal */}
-          <Description medias={medias}/>
+            <Carrousel medias={medias}/>
       </main>
         {/* footer */}
       <footer>
