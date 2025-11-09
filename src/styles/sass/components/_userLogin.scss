@@ -1,10 +1,8 @@
 // section profil
 .profils{
-  // border: 2px solid blue;
   display: flex;
   justify-content: space-around;
   .profil{
-    // border: 2px solid greenyellow;
     cursor: pointer;
     &-img{
       border: 2px solid transparent;
@@ -33,4 +31,3 @@
     }
   }
 }
-// ajout user

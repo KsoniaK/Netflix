@@ -23,6 +23,14 @@
         cursor: pointer;
       }
     }
+    .slider {
+      display: flex;           /* items en ligne */
+      overflow-x: auto;        /* permet le scroll horizontal */
+      scroll-behavior: smooth; /* défilement smooth */
+      -webkit-overflow-scrolling: touch;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
     .category{
       border: 2px solid royalblue;
       cursor: pointer;
@@ -38,20 +46,6 @@
         }
         &:hover{
           transform: scale(1.1);
-        }
-      }
-      .card-actions{
-        border: 2px solid palevioletred;
-        display: flex;
-        .play-add-like{
-          display: flex;
-        }
-        img{
-        border: 1px solid darkslategrey;
-        border-radius: 2rem;
-        padding: 0.6rem;
-        width: 1rem;
-        filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
         }
       }
     }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import "../styles/sass/layouts/_header.scss";
 import logo from "../styles/img/logo.png";
@@ -10,28 +10,32 @@ import email from "../styles/img/email.png";
 import gitHub from "../styles/img/github.png";
 import more from "../styles/img/more.png";
 
-function Header({categories}){
-  // scroll
-  window.onscroll = function() {scrollFunction()};
+function Header({totalLikes = 0}){  
+  const [showSearch, setShowSearch] = useState(false);
 
-  function scrollFunction(){
-    // au scroll vers le bas a 20PX du haut de la page, apparition de la div
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("header_accueil").style.top = "0";
-      document.getElementById("header_accueil").style.backgroundColor = "#141414";
-    }else {
-    //on cache la nav à -68PX top
-    document.getElementById("header_accueil").style.background = "linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)"
-    };
-  };
+  useEffect(() => {
+    function scrollFunction() {
+      const header = document.getElementById("header_accueil");
+      if (!header) return;
+
+      if (window.scrollY > 20) {
+        header.style.top = "0";
+        header.style.backgroundColor = "#141414";
+      } else {
+        header.style.background =
+          "linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)";
+      }
+    }
+
+    window.addEventListener("scroll", scrollFunction);
+
+    return () => window.removeEventListener("scroll", scrollFunction);
+  }, []);
 
   // faire apparaître le détail du panneau de configuration dans le header
-  // Barre de recherche
-  const searchInput = document.getElementById('search_input');
-  // Faire apparaître la barre de recherche
-  function Research(){
-    searchInput.style.display = 'block';
-  };
+  function toggleSearch() {
+    setShowSearch(s => !s);
+  }
 
   return(
     <section className="nav_container">
@@ -54,11 +58,13 @@ function Header({categories}){
         </ul>
         <div className="nav_profil">
           <div className="nav_search">
-            <input id="search_input" type="text" name="research" placeholder="Titre, technologie" src={search}/>
+            <input id="search_input" type="text" name="research" placeholder="Titre, technologie" src={search} style={{display: showSearch? "block" : "none"}}/>
           </div>
-          <img id="searchingLoupe" className="nav_profil-img" src={search} alt="search" onClick={Research}/>
-          <img className="nav_profil-img" src={like} alt="likes compteur"/>
-          <p>Likes: 0</p>
+          <img id="searchingLoupe" className="nav_profil-img" src={search} alt="search" onClick={toggleSearch}/>
+          <div className="total-likes">
+            <img className="nav_profil-img" src={like} alt="likes compteur"/>
+              <span>{totalLikes}</span>
+          </div>
           <div className="nav_tools">
             <img src={profil} alt="profil"/>
             <img className="nav_tools-img" src={more} alt="more"/>

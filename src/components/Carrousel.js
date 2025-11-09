@@ -1,70 +1,69 @@
-import React from 'react';
+import React from "react";
 import "../styles/sass/components/_carrousel.scss";
-import logoInitial from '../styles/img/logo.png';
-import imgPlay from '../styles/img/play.png';
-import imgLike from '../styles/img/like.png';
-import closeModalImg from '../styles/img/exit.png';
-// import imgExemple from '../styles/img/imgProfil.jpg';
-import { Link } from 'react-router-dom';
+import imgPlay from "../styles/img/play.png";
+import imgLike from "../styles/img/like.png";
+import closeModalImg from "../styles/img/exit.png";
 
-function Carrousel({medias}){
-  // Fermer la modal
-  function CloseModalCarousel(){
-    document.getElementById('media_container').style.display = "none"
-  };
+function Carrousel({ media, onClose, onLike}) {
+  if (!media) return null;
 
+  return (
+    <div className="carousel-container">
+      <section id="media_modal" className="media_modal">
+        {/* Bouton fermeture */}
+        <button className="closeModal-buton" onClick={onClose}>
+          <img className="closeModal" src={closeModalImg} alt="Fermer" />
+        </button>
 
+        {/* Image principale */}
+        <div className="div-media-img">
+          <img
+            className="media-bg"
+            src={media.picture}
+            alt={media.title}
+          />
+        </div>
 
+        {/* Détails */}
+        <div className="div-media_details">
+          <h1 className="carouselPhotosNames">{media.title}</h1>
 
+          {/* Boutons : Voir + Like */}
+          <div className="presentation_details-buttons">
+            <a href={media.url} target="_blank" rel="noreferrer">
+              <button className="presentation_details-buttons-first">
+                <img src={imgPlay} alt="lecture" />
+                <p>Voir</p>
+              </button>
+            </a>
 
-
-
-
-
-  // Afficher le bon média pour la fiche détaillée
-  // SI mediaID === data-id ALORS on afficheƒ
-  return(
-    <section id='media_container' className='media_container'>
-        <section id="media_modal">
-          <div className='div-media-img'>
-            <img className='presentation-bg media-bg' src={medias.picture} alt='illustration projet'/>
+            <button className={`presentation_details-buttons-first like-button_media ${
+             media.isLiked ? 'liked' : ''
+            }`}
+              onClick={() => onLike(media.mediaId)}
+              aria-pressed={media.isLiked}
+            >
+              <img src={imgLike} alt="j'aime" />
+            </button>
           </div>
-          <div className='closeModal-div' onClick={CloseModalCarousel}>
-            <img id='closeModal' className='closeModal' src={closeModalImg} alt='fermer'/>
+        </div>
+
+        {/* Description */}
+        <div className="div-media_description">
+          <div className="resume-carousel">
+            <p>{media.resume}</p>
           </div>
-          <div className='div-media_details'>
-            <div className='presentation_details-developpeur-name'>
-              <img className='logo-modal' src={logoInitial} alt='Logo initial "p"'/>
-              {/* <span className='span-modal'>{user.name}</span> */}
-              <span className='span-modal'>Sonia KECHIT</span>
+
+          {media.tags && (
+            <div className="tags">
+              <p>
+                Tags : <span>{media.tags}</span>
+              </p>
             </div>
-            {/* titre */}
-              <h1>{medias.title}</h1>
-              {/* résumé */}
-                {/* boutons : lecture / infos */}
-                <div className='presentation_details-buttons'>
-                {/* lecture */}
-                <Link to={medias.url} target='_blank'>
-                  <button className='presentation_details-buttons-first'>
-                    <img src={imgPlay} alt='Lecture illustration'/>
-                    <p>Voir</p>
-                  </button>
-                </Link>
-                  <button className='presentation_details-buttons-first like-button_media'>
-                    <img src={imgLike} alt='j aime'/>
-                  </button>
-              </div>
-          </div>
-          <div className='div-media_description'>
-            <div className='resume'>
-              <p>{medias.resume}</p>
-            </div>
-            <div className='tags'>
-              <p>Tags : <span>{medias.tags}</span></p>
-            </div>
-          </div>
-        </section>
-    </section>
-  )
+          )}
+        </div>
+      </section>
+    </div>
+  );
 }
 export default Carrousel;

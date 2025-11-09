@@ -1,17 +1,27 @@
 import '../styles/sass/components/_categories.scss';
+import '../styles/sass/components/_carrousel.scss';
 
-function Categories({medias}){
+function Categories({ medias, onMediaClick }){
 
-  async function createCardGallery() {
-    const listeMedia = document.getElementById('liste-media');
-    medias.forEach(media => listeMedia.innerHTML +=
-      `<article id='category' className='category'>
-          <div id='category_container' data-id="${media.mediaId}" className='category_container'>
-            <img data-id="${media.mediaId}" className='img-projet' src="${media.pictureCategory}" alt='illustration'/>
+  return (
+    <section id="liste-media">
+      {medias.map(media => (
+        <article key={media.mediaId} className="category">
+          <div
+            className="category_container"
+            onClick={() => {
+              onMediaClick(media.mediaId)
+            }}
+          >
+            <img
+              className="img-projet"
+              src={media.pictureCategory}
+              alt={media.title}
+            />
           </div>
-        </article>`    
-  )}
-  createCardGallery();
-
+        </article>
+      ))}
+    </section>
+    )
 }
 export default Categories;

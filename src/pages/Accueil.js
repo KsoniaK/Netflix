@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { useRef } from 'react';
 import '../styles/sass/pages/_accueil.scss';
 import data from "../data/data.json";
 import Header from '../layouts/Header';
@@ -11,22 +12,13 @@ import leftArrow from "../styles/img/left-arrow.png";
 import rightArrow from "../styles/img/right-arrow.png";
 import { Link } from 'react-router-dom';
 
+
 function Accueil() {
+  const [selectedMedia, setSelectedMedia] = useState(null);
   const [medias, setMedias] = useState([]);
-  // const [categories, setCategories] = useState([]);
   const [imgAccueil, setImgAccueil] = useState([]);
-
-  useEffect(() =>{
-    setMedias(
-      data.projets.medias
-    );
-  }, []);
-
-  // useEffect(() =>{
-  //   setCategories(
-  //     data.projets.categories
-  //   );
-  // }, []);
+  const totalLikes = medias.reduce((sum, m) => sum + (Number(m.like) || 0), 0);
+  console.log(totalLikes);
   
   useEffect(() =>{
     setImgAccueil(
@@ -36,19 +28,71 @@ function Accueil() {
     );
   }, []);
 
-  
-  function CarouselRightArrow(){
-    console.log('cliqué à droite');
+  // ✅ chargement des médias avec initialisation des likes
+  useEffect(() => {
+    const normalized = data.projets.medias.map(m => ({
+      ...m,
+      like: Number(m.like) || 0,
+      isLiked : m.isLiked ?? false,
+    }));
+    setMedias(normalized);
+  }, []);
+
+
+  // Slider Carousel
+  const sliderRef = useRef(null);
+  const scrollAmount = 440;
+
+  function HandleScrollLeft(){
+      console.log("sliderRef.current =", sliderRef.current);
+
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft -= scrollAmount;
+    }
   };
 
-  function CarouselLeftArrow(){
-    console.log('cliqué à gauche');
+  function HandleScrollRight(){
+      console.log("sliderRef.current =", sliderRef.current);
+
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft += scrollAmount;
+    }
   };
+
+
+  // Ouverture / Fermeture carousel
+function OpenModalCarousel(mediaId) {
+  const index = medias.findIndex(m => m.mediaId === mediaId);
+  if (index !== -1) {
+    setSelectedMedia(index);
+  }
+}
+
+  function CloseModalCarousel() {
+    setSelectedMedia(null);
+  }
+
+  // Likes
+function HandleLike(mediaId) {
+  setMedias(prev =>
+    prev.map(m => {
+      if (m.mediaId !== mediaId) return m;
+      const alreadyLiked = m.isLiked === true;
+      return {
+        ...m,
+        isLiked: !alreadyLiked,
+        like: Number(m.like || 0) + (alreadyLiked ? -1 : 1)
+      };
+    })
+  );
+}
 
   return (
     <>
       <header id="header_accueil" className='header_accueil'>
-        <Header/>
+        <Header medias={medias}
+        totalLikes={totalLikes}
+        />
       </header>
       <main className='main'>
         {/* présentation */}
@@ -75,19 +119,26 @@ function Accueil() {
         <div className='categories-container'>
             <h2>Projets</h2>
           <section className='categories'>
-            <div className='carousel-arrow left'>
-              <img src={leftArrow} alt='précédent' onClick={CarouselLeftArrow}/>
+            <div className='carousel-arrow left' onClick={HandleScrollLeft}>
+              <img src={leftArrow} alt='précédent'/>
             </div>
-            <div className='carousel-arrow right'>
-              <img src={rightArrow} alt='suivant' onClick={CarouselRightArrow}/>
+            {/* Slider (élément scrollable) */}
+            <section id="slider" ref={sliderRef} className="slider">
+              <Categories medias={medias} onMediaClick={OpenModalCarousel} />
+            </section>
+            <div className='carousel-arrow right' onClick={HandleScrollRight}>
+              <img src={rightArrow} alt='suivant'/>
             </div>
-              <section id='liste-media'>
-                    <Categories medias={medias}/>
-              </section>
           </section>
         </div>
           {/* Media modal */}
-            <Carrousel medias={medias}/>
+              {selectedMedia !== null && (
+                <Carrousel 
+                  media={medias[selectedMedia]} 
+                  onClose={CloseModalCarousel}
+                  onLike={HandleLike}
+                />
+              )}
       </main>
         {/* footer */}
       <footer>
@@ -95,5 +146,6 @@ function Accueil() {
       </footer>
     </>
   );
+
 }
 export default Accueil;

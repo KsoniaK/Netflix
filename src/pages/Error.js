@@ -15,7 +15,7 @@ function Error(){
       <section className='error-section'>
         <div className='error-contenu'>
           <h1>Vous cherchez votre chemin ?</h1>
-          <p>Désolés, nous n'avons pas trouvé cette page.<br/>Un vaste choix de projets vous attend sur la page d'accueil.</p>
+          <p>Désolée, nous n'ai pas trouvé cette page.<br/>Un vaste choix de projets vous attend sur la page d'accueil.</p>
           <Link to={"/accueil"}>
             <button>Accueil Portfolio</button><br/>
           </Link>
