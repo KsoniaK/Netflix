@@ -5,9 +5,7 @@
   background: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
 };
 main{
-  border: 2px solid aquamarine;
   .presentation{
-    border: 2px solid fuchsia;
     position: relative;
     &-bg{
       width: 100%;
@@ -21,14 +19,13 @@ main{
       position: absolute;
       bottom: 45%;
       right: 0%;
-      width: 10%;
+      width: 15%;
       align-items: center;
       display: flex;
         & a{
-          width: 70%;
+          width: 40%;
         }
         & img{
-          border: 1px solid white;
           border-radius: 2rem;
           padding: 0.4rem;
           width: 40%;
@@ -68,6 +65,9 @@ main{
       margin-bottom: .7rem;
       font-size: 1.3rem;
     }
+    // .no-results{
+    //   border: 1px solid red;
+    // }
     .carousel-arrow{
       position: absolute;
       bottom: 0%;

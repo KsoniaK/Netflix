@@ -10,6 +10,7 @@ import Footer from '../layouts/Footer';
 import imgReact from '../styles/img/React-icon.png';
 import leftArrow from "../styles/img/left-arrow.png";
 import rightArrow from "../styles/img/right-arrow.png";
+import noResultResearch from "../styles/img/no-result-research.jpg";
 import { Link } from 'react-router-dom';
 
 
@@ -17,8 +18,8 @@ function Accueil() {
   const [selectedMedia, setSelectedMedia] = useState(null);
   const [medias, setMedias] = useState([]);
   const [imgAccueil, setImgAccueil] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
   const totalLikes = medias.reduce((sum, m) => sum + (Number(m.like) || 0), 0);
-  console.log(totalLikes);
   
   useEffect(() =>{
     setImgAccueil(
@@ -28,15 +29,53 @@ function Accueil() {
     );
   }, []);
 
-  // ✅ chargement des médias avec initialisation des likes
-  useEffect(() => {
-    const normalized = data.projets.medias.map(m => ({
+  // chargement des médias avec initialisation des likes
+useEffect(() => {
+  const normalized = data.projets.medias.map(m => {
+    // normaliser tags en tableau de strings
+    let tagsNormalized = [];
+
+    if (m.tags == null) {
+      tagsNormalized = [];
+    } else if (Array.isArray(m.tags)) {
+      tagsNormalized = m.tags.map(t => String(t).trim());
+    } else if (typeof m.tags === "string") {
+      // si c'est "tag1, tag2" ou "tag1 tag2"
+      tagsNormalized = m.tags.split(/[,;|]/).map(t => String(t).trim()).filter(Boolean);
+      if (tagsNormalized.length === 0) {
+        // fallback: split par espace
+        tagsNormalized = m.tags.split(/\s+/).map(t => String(t).trim()).filter(Boolean);
+      }
+    } else if (typeof m.tags === "object") {
+      // objet — essayons d'extraire valeurs ou clés
+      try {
+        // si c'est un objet {0:"tag1",1:"tag2"} ou {tech:"react"}
+        const values = Object.values(m.tags).map(v => String(v).trim()).filter(Boolean);
+        if (values.length > 0) {
+          tagsNormalized = values;
+        } else {
+          const keys = Object.keys(m.tags).map(k => String(k).trim()).filter(Boolean);
+          tagsNormalized = keys;
+        }
+      } catch (e) {
+        tagsNormalized = [];
+      }
+    } else {
+      tagsNormalized = [];
+    }
+
+    return {
       ...m,
       like: Number(m.like) || 0,
-      isLiked : m.isLiked ?? false,
-    }));
-    setMedias(normalized);
-  }, []);
+      isLiked: m.isLiked ?? false,
+      tags: tagsNormalized
+    };
+  });
+  
+  setMedias(normalized);
+}, []);
+
+
 
 
   // Slider Carousel
@@ -87,11 +126,27 @@ function HandleLike(mediaId) {
   );
 }
 
+// Filtre
+// calculer la liste filtrée à afficher
+const q = (searchValue || "").trim().toLowerCase();
+
+const filteredMedias = medias.filter(m => {
+  if (!q) return true; // pas de recherche -> tout afficher
+
+  const title = String(m.title || "").toLowerCase();
+  const resume = String(m.resume || "").toLowerCase();
+  const tags = (m.tags || []).join(" ").toLowerCase();
+
+  return title.includes(q) || resume.includes(q) || tags.includes(q);
+});
+
+
   return (
     <>
       <header id="header_accueil" className='header_accueil'>
-        <Header medias={medias}
+        <Header
         totalLikes={totalLikes}
+        onSearchChange={setSearchValue}
         />
       </header>
       <main className='main'>
@@ -103,7 +158,13 @@ function HandleLike(mediaId) {
             {/* détails */}
             <div className='presentation_details'>
                 <article>
-                  <AccueilDetails imgAccueil={imgAccueil}/>
+                  <AccueilDetails
+                  imgAccueil={imgAccueil}
+                    onInfosClick={() => {
+                      const index = medias.findIndex(m => m.mediaId === imgAccueil.mediaId);
+                      setSelectedMedia(index);
+                    }}
+                  />
                 </article>
             </div>
           </div>
@@ -113,24 +174,31 @@ function HandleLike(mediaId) {
           <Link to={"https://fr.legacy.reactjs.org/"} target='_blank'>
           <img className='img-react' src={imgReact} alt='documentation react'/>
           </Link>
-          <span>{imgAccueil?.age}</span>
+          <span>{imgAccueil?.tags}</span>
         </div>
         {/* catégories */}
-        <div className='categories-container'>
+          <div className='categories-container'>
             <h2>Projets</h2>
-          <section className='categories'>
-            <div className='carousel-arrow left' onClick={HandleScrollLeft}>
-              <img src={leftArrow} alt='précédent'/>
-            </div>
-            {/* Slider (élément scrollable) */}
-            <section id="slider" ref={sliderRef} className="slider">
-              <Categories medias={medias} onMediaClick={OpenModalCarousel} />
-            </section>
-            <div className='carousel-arrow right' onClick={HandleScrollRight}>
-              <img src={rightArrow} alt='suivant'/>
-            </div>
-          </section>
-        </div>
+            {filteredMedias.length === 0 ? (
+              <div className="no-results">
+                <h3>Aucun projet ne correspond à votre recherche 🧐</h3>
+              </div>
+            ) : (
+              <section className='categories'>
+                <div className='carousel-arrow left' onClick={HandleScrollLeft}>
+                  <img src={leftArrow} alt='précédent'/>
+                </div>
+
+                <section id="slider" ref={sliderRef} className="slider">
+                  <Categories medias={filteredMedias} onMediaClick={OpenModalCarousel} />
+                </section>
+
+                <div className='carousel-arrow right' onClick={HandleScrollRight}>
+                  <img src={rightArrow} alt='suivant'/>
+                </div>
+              </section>
+            )}
+          </div>
           {/* Media modal */}
               {selectedMedia !== null && (
                 <Carrousel 

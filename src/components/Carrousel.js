@@ -43,7 +43,10 @@ function Carrousel({ media, onClose, onLike}) {
               onClick={() => onLike(media.mediaId)}
               aria-pressed={media.isLiked}
             >
-              <img src={imgLike} alt="j'aime" />
+              <img
+              className={media.isLiked ? "liked" : ""}
+              src={imgLike} alt="j'aime"
+              />
             </button>
           </div>
         </div>

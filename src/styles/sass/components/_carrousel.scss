@@ -1,6 +1,5 @@
 .carousel-container{
   display: flex;
-  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -8,12 +7,12 @@
   background-color: rgba(0,0,0,0.6);
   z-index: 1000;
     #media_modal{
-      border: 2px solid cornflowerblue;
       width: 50%;
+      height: 80vh;
       .closeModal-buton{
-        border: 2px solid pink;
-        top: 15%;
-        left: 72%;
+        border: 1px solid white;
+        top: 12%;
+        left: 71%;
         position: absolute;
         height: 40px;
         width: 40px;
@@ -21,19 +20,15 @@
         border-radius: 75%;
         background-color: black;
         .closeModal{
-          border: 2px solid red;
           position: absolute;
           width: 70%;
-          top: 3px;
-          right: 3px;
+          top: 6px;
+          right: 6px;
           font-size: 2rem;
           cursor: pointer;
           background: none;
           z-index: 2000;
           filter: invert(100%);
-        }
-        &:hover{
-        border: 2px solid white;
         }
       }
       .div-media-img{
@@ -60,30 +55,22 @@
           width: 0%;
           height: 45px;
           background-color: black;
-          border: 2px solid hsla(0,0%,100%,.5);
           padding: 1.5rem;
           transition: 0.2s ease;
           & img{
             filter: invert(100%) sepia(15%) saturate(0%) hue-rotate(7deg) brightness(102%) contrast(102%);
             padding-right: 0;
           }
-          &:hover{
-            border: 2px solid white;
+          & img.liked{
+            filter: brightness(0) saturate(100%) invert(23%) sepia(52%) saturate(3000%) hue-rotate(355deg) brightness(93%) contrast(105%);
           }
-          // &.liked{
-          //   animation: pop 0.25 forwards;
-          //   filter: brightness(1.5);
-          // }
-        }
-        .like-button_media.liked{
-          // filter: brightness(0) saturate(100%) hue-rotate(330deg);
-          // transform: scale(1.1);
         }
       }
       .div-media_description{
+        background-color: #181818;
         padding: 3rem;
         display: flex;
-        background-color: #181818;
+        border-radius: 0rem 0rem .5rem .5rem ;
         .resume-carousel{
           width: 50%;
         }
@@ -98,10 +85,10 @@
       &::after{
         content: "";
         display: block;
-        width: 100%;
+        width: 50%;
         height: 3rem;
         position: absolute;
-        bottom: 39%;
+        bottom: 40%;
         background: linear-gradient(180deg, rgba(31, 31, 31, 0), rgba(31, 31, 31, 0.5), #181818);
       }
       &:hover{

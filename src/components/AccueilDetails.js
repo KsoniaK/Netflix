@@ -4,7 +4,12 @@ import logoLettre from '../styles/img/p.png';
 import imgPlay from '../styles/img/play.png';
 import imgInfo from '../styles/img/info.png';
 
-function AccueilDetails({imgAccueil}){
+function AccueilDetails({imgAccueil, onInfosClick}){
+    function HandleOpenLink() {
+    if (imgAccueil?.url) {
+      window.open(imgAccueil.url, "_blank");
+    }
+  }
 
     return(
               <>
@@ -21,12 +26,16 @@ function AccueilDetails({imgAccueil}){
                     {/* boutons : lecture / infos */}
                   <div className='presentation_details-buttons'>
                     {/* lecture */}
-                    <button className='presentation_details-buttons-first'>
+                    <button className='presentation_details-buttons-first'
+                    onClick={HandleOpenLink}
+                    >
                       <img src={imgPlay} alt='Lecture illustration'/>
-                      <p>Voir</p>
+                        <p>Voir</p>
                     </button>
                     {/* infos */}
-                    <button className='presentation_details-buttons-second'>
+                    <button className='presentation_details-buttons-second'
+                    onClick={onInfosClick}
+                    >
                       <img src={imgInfo} alt='Lecture illustration'/>
                       <p>Plus d'infos</p>
                     </button>

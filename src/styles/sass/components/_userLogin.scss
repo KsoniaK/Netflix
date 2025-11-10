@@ -5,7 +5,6 @@
   .profil{
     cursor: pointer;
     &-img{
-      border: 2px solid transparent;
       height: 10vw;
       width: 10vw;
       object-fit: cover;
@@ -23,7 +22,6 @@
   }
   &:hover{
     .profil-img{
-      border: 2px solid white;
       background-color: white;
     }
     h2{

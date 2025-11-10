@@ -10,9 +10,10 @@ import email from "../styles/img/email.png";
 import gitHub from "../styles/img/github.png";
 import more from "../styles/img/more.png";
 
-function Header({totalLikes = 0}){  
+function Header({totalLikes = 0, onSearchChange}){  
   const [showSearch, setShowSearch] = useState(false);
 
+  // menu
   useEffect(() => {
     function scrollFunction() {
       const header = document.getElementById("header_accueil");
@@ -32,7 +33,7 @@ function Header({totalLikes = 0}){
     return () => window.removeEventListener("scroll", scrollFunction);
   }, []);
 
-  // faire apparaître le détail du panneau de configuration dans le header
+  // faire apparaître le détail de la recherche dans le header
   function toggleSearch() {
     setShowSearch(s => !s);
   }
@@ -46,21 +47,30 @@ function Header({totalLikes = 0}){
       </Link>
       <nav className="nav">
         <ul className="nav_menu">
-              <li className="nav_name">GitHub</li>
-                <Link to={'https://github.com/KsoniaK?tab=repositories'} target="_blank">
-                </Link>
-                <Link to={'mailto:kechiteu@gmail.com'} target="_blank">
-              <li className="nav_name">Mail</li>
-                </Link>
-                <Link to={'tel:0783679676'}>
-              <li className="nav_name">Téléphone</li>
-                </Link>
+              <Link to={'https://github.com/KsoniaK?tab=repositories'} target="_blank">
+                <li className="nav_name">GitHub</li>
+              </Link>
+              <Link to={'mailto:kechiteu@gmail.com'} target="_blank">
+                <li className="nav_name">Mail</li>
+              </Link>
+              <Link to={'tel:0783679676'}>
+                <li className="nav_name">Téléphone</li>
+              </Link>
         </ul>
         <div className="nav_profil">
           <div className="nav_search">
-            <input id="search_input" type="text" name="research" placeholder="Titre, technologie" src={search} style={{display: showSearch? "block" : "none"}}/>
+            {showSearch &&(
+              <input 
+              id="search_input"
+              type="text"
+              name="research"
+              placeholder="Titre, technologie"
+              src={search} style={{display: showSearch? "block" : "none"}}
+              onChange={(e) => onSearchChange(e.target.value)}
+              />
+            )}
+            <img id="searchingLoupe" className="nav_profil-img" src={search} alt="search" onClick={toggleSearch}/>
           </div>
-          <img id="searchingLoupe" className="nav_profil-img" src={search} alt="search" onClick={toggleSearch}/>
           <div className="total-likes">
             <img className="nav_profil-img" src={like} alt="likes compteur"/>
               <span>{totalLikes}</span>
