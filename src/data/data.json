@@ -129,9 +129,9 @@
         "title": "Coding challenge",
         "picture": "/imgProjets/codingChallenge.png",
         "pictureCategory": "/imgProjets/codingChalenge_category.png",
-        "resume": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "resume": "Initiation à la création d'une base de données (MySQL via phpMyAdmin), deployer un projet sur GitHub Pages (client + serveur)",
         "tags": ["HTML,", " CSS,", " REACT,", " NODE"],
-        "url": "https://github.com/KsoniaK/coding_challenge.git"
+        "url": " https://ksoniak.github.io/BDD-Challenge_client/"
       },
       {
         "mediaId": 11,
@@ -151,7 +151,7 @@
         "pictureCategory": "/imgProjets/learnHome_category.png",
         "resume": "LearnHome est une association qui met en relation des enfants en diﬃculté scolaire avec des tuteurs bénévoles. Elle souhaite travailler avec nous sur toute la conception de son site web",
         "tags": ["Maquette,", " Diagramme,", " User stories,", " Kanban"],
-        "url": "https://docs.google.com/presentation/d/15LT_YXWI1U84Wj92kUrmyleOATDjBwgqh4H7IHxhICU/edit?usp=sharing"
+        "url": "Definir-les-besoins-pour-une-application-de-soutien-scolaire.pdf"
       }
     ]
   }
