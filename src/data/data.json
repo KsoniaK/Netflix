@@ -81,7 +81,7 @@
         "pictureCategory": "/imgProjets/fishEye_category.png",
         "resume": "FishEye. FishEye est un site web qui permet aux photographes indépendants de présenter leurs meilleurs travaux. Notre objectif est de construire un prototype fonctionnel d'un nouveau site web",
         "tags": ["HTML,", " CSS,", " Javascript"],
-        "url": "https://github.com/KsoniaK/SoniaKechit_6_09112021.git"
+        "url": "https://ksoniak.github.io/SoniaKechit_6_09112021/"
       },
       {
         "mediaId": 6,
@@ -121,7 +121,7 @@
         "pictureCategory": "/imgProjets/kasa_category.png",
         "resume": "Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans. Elle souhaite une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté Back-end, et React côté Front-end",
         "tags": ["HTML,", " CSS,", " REACT"],
-        "url": "https://github.com/KsoniaK/Kechit_Sonia_Kasa_11-2022.git"
+        "url": "https://ksoniak.github.io/Kechit_Sonia_Kasa_11-2022/"
       },
       {
         "mediaId": 10,
