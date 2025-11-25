@@ -20,37 +20,32 @@ function Footer() {
           <img src={gitHub} alt='gitHub'/>
         </Link>
         </div>
-      <section className='mentions-footer'>
         <div>
-          <ul>
-            <li>React / Node</li>
-          </ul>
          <Link to={'https://github.com/KsoniaK/PortfolioNetflix'} target="_blank">
           <button>Git repository</button>
           </Link>
-          <p>© 2025 Portfolio, Inc</p>
         </div>
-        <div>
+      <section className='mentions-footer'>
+          <ul>
+            <li>React / Node</li>
+          </ul>
           <ul>
               <li>Javascript</li>
             </ul>
-        </div>
-        <div>
           <ul>
             <li>HTML / CSS / SASS</li>
             </ul>
-        </div>
-        <div>
           <ul>
             <li>CMS</li>
             </ul>
-        </div>
-        <div>
           <ul>
             <li>Gestion de projet</li>
             </ul>
-        </div>
       </section>
+      <div>
+        <p>© 2025 Portfolio, Inc</p>
+
+      </div>
     </>
   );
 }

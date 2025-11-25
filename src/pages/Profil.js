@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import UserLogin from '../components/UserLogin';
 import '../../src/index.scss';
 import '../styles/sass/pages/_profil.scss'
-import '../styles/style.css'
 
 function Profil({users}){
 

@@ -1,3 +1,7 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+
 .login-profil_details{
   & img{
     filter: brightness(.3);
@@ -11,6 +15,16 @@
     top: 40%;
     left: 21%;
     text-align: center;
+      /* Mobile */
+    @media (max-width: 600px) { 
+      top: 25%;
+      left: 0%;
+    }
+      /* Tablette */
+    @media (min-width: 601px) and (max-width: 1024px) { 
+      top: 30%;
+      right: 20%;
+    }
     & h1{
         font-size: 3.5rem;
         font-weight: 900;

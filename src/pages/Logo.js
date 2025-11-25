@@ -2,7 +2,8 @@ import React from 'react';
 import '../../src/index.scss';
 import '../styles/sass/pages/_logo.scss'
 import HeaderLogin from '../layouts/HeaderLogin';
-import loginImg from '../styles/img/logo-img.jpg'
+import loginImg from '../styles/img/logo-img.jpg';
+// import "../styles/style.scss";
 
 function Logo(){
   return(

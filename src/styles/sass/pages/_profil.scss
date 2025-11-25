@@ -9,11 +9,41 @@
     width: 25%;
     right: 37%;
     top: 20%;
+    /* Mobile */
+    @media (max-width: 600px) { 
+      width: 100%;
+      right: 0%;
+      top: 30%;
+    }
+    /* Tablette */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      top: 30%;
+    }
   }
   &-h1{
     font-size: 3.5vw;
     font-weight: 400;
     margin-bottom: 1.5rem;
+    /* Mobile */
+    @media (max-width: 600px) { 
+      font-size: 10vw;
+    }
+  }
+  .profils{
+    .profil{
+      img{
+        height: 10vw;
+        width: 10vw;
+        /* Mobile */
+        @media (max-width: 600px){ 
+          height: 30vw;
+          width: 30vw;
+        }
+      }
+      h2{
+        font-size: 1.2rem;
+      }
+    }
   }
   &-button{
     border: 1px solid white;
@@ -23,6 +53,10 @@
     margin: 2em 0 1em;
     padding: 0.5em 1.5em;
     color: grey;
+    /* Mobile */
+    @media (max-width: 600px) { 
+      font-size: 4vw;
+    }
       &:hover{
         color: white;
       }

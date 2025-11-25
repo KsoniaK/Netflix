@@ -22,6 +22,16 @@ main{
       width: 15%;
       align-items: center;
       display: flex;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        bottom: 30%;
+        right: 0%;
+        width: 50%;
+      }
+      /* Tablette */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        width: 35%;
+      }
         & a{
           width: 40%;
         }
@@ -91,4 +101,10 @@ main{
 }
 #liste-media{
   display: flex;
+  @media (max-width: 600px){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: hidden;
+    padding-right: .5rem;
+  }
 }

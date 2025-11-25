@@ -13,11 +13,23 @@
   .error-contenu{
     position: absolute;
     z-index: 2;
-    left: 20%;
+    left: 17%;
     top: 25%;
     text-align: center;
+    /* Mobile */
+    @media (max-width: 600px) { 
+      left: 0%;
+    }
+    /* Tablette */
+    @media (min-width: 601px) and (max-width: 1024px) { 
+      left: 5%;
+    }
     & h1{
       font-size: 4em;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        font-size: 2em;
+      }
     }
     & p{
       font-size: 1.3em;
@@ -48,5 +60,15 @@
     position: relative;
     width: 100%;
     opacity: .5;
+    /* Mobile */
+    @media (max-width: 600px) { 
+      object-fit: cover;
+      height: 95vh;
+    }
+    /* Tablette */
+    @media (min-width: 601px) and (max-width: 1024px) { 
+      object-fit: cover;
+      height: 95vh;
+    }
   }
 }

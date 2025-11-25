@@ -4,6 +4,16 @@
   width: 92%;
   margin-left: auto;
   margin-right: auto;
+  /* Mobile */
+  @media (max-width: 600px) { 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  /* Tablette */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   .nav_logo{
     & img{
       width: 7rem;
@@ -13,9 +23,25 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    /* Mobile */
+    @media (max-width: 600px) { 
+      justify-content: space-around;
+    }
+    /* Tablette */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      justify-content: end;
+    }
     &_menu{
       display: flex;
       justify-content: space-around;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        display: none;
+      }
+      /* Tablette */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        display: none;
+      }
       & a{
         text-decoration: none;
         margin-right: 1rem;
@@ -33,8 +59,20 @@
       align-items: center;
       width: 20%;
       justify-content: space-evenly;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        width: 100%;
+        justify-content: end;
+      }
+      /* Tablette */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        width: 30%;
+      }
       .nav_search{
         display: flex;
+        @media (max-width: 600px) { 
+          display: none;
+        }
         & input{
           border: 1px solid white;
           margin-left: -10rem;
@@ -45,17 +83,27 @@
           color: white;
         }
       }
+      .total-likes{
+      /* Mobile */
+      @media (max-width: 600px) { 
+        display: flex;
+        margin-right: 1rem;
+        align-items: center;
+      }
+      }
       & p{
         margin-right: 1rem;
       }
       &-img{
         filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
         width: 1.3rem!important;
-        margin-right: 1rem;
+        margin-right: .5rem;
       }
       & img{
         width: 2rem;
-        cursor: pointer;
+        @media (max-width: 600px){
+          width: 2.5rem;
+        }
       }
       .nav_tools{
         display: flex;
@@ -71,7 +119,11 @@
         }
         &-img{
           filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
-          width: 1.2rem;
+          width: .5rem;
+          margin-left: .5rem;
+          @media (max-width: 600px){
+            display: none;
+          }
         }
       }
     }

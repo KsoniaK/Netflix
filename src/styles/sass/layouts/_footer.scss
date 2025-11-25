@@ -3,15 +3,30 @@ footer{
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
+  @media (max-width: 600px){
+    padding-left: 1rem;
+  }
+  /* Tablette */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    padding-left: 4%;
+  }
   .social-media img{
     width: 1.5rem;
     filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
     padding-right: 2rem;
     cursor: pointer;
+    margin-bottom: 1rem;
   }
   .mentions-footer{
     display: flex;
     justify-content: space-between;
+    @media (max-width:600px){
+      display: block;
+    }
+    /* Tablette */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      width: 90%;
+    }
     & ul{
       padding: 0;
       & li{
@@ -19,15 +34,15 @@ footer{
         color: gray;
       }
     }
-    & button{
+    & p{
+      color: gray;
+    }
+  }
+   button{
       cursor: pointer;
       background-color: black;
       color: gray;
       border: 1px solid;
       padding: 0.3rem;
     }
-    & p{
-      color: gray;
-    }
-  }
 }
