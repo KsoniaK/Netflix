@@ -69,6 +69,10 @@ main{
     }
     &:hover .left{
       display: flex;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        display: none;
+      }
     }
     & h2{
       margin-top: 0;
