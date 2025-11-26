@@ -5,10 +5,18 @@ footer{
   margin-top: 4rem;
   @media (max-width: 600px){
     padding-left: 1rem;
+    text-align: center;
   }
   /* Tablette */
   @media (min-width: 601px) and (max-width: 1024px) {
     padding-left: 4%;
+  }
+  .social-media{
+    @media (max-width: 600px){
+      text-align: center;
+      justify-content: space-around;
+      display: flex;
+    }
   }
   .social-media img{
     width: 1.5rem;

@@ -3,8 +3,16 @@
   top: 30%;
   left: 4%;
   z-index: 2;
+  /* Mobile */
+  @media (max-width: 600px) {
+      top: 25%;
+  }
   .resume{
     width: 70%;
+    /* Mobile */
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
   &-developpeur-name{
     & img{
@@ -15,6 +23,8 @@
     /* Mobile */
     @media (max-width: 600px) {
       font-size: 3rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
      }
   }
   &-buttons{

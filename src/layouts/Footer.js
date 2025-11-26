@@ -19,13 +19,18 @@ function Footer() {
         <Link to={'https://github.com/KsoniaK?tab=repositories'} target="_blank">
           <img src={img("github2.png")} alt='gitHub' />
         </Link>
+        <div>
+          <Link to={'https://github.com/KsoniaK/PortfolioNetflix'} target="_blank">
+            <button>Git repository</button>
+          </Link>
+        </div>
       </div>
 
-      <div>
+      {/* <div>
         <Link to={'https://github.com/KsoniaK/PortfolioNetflix'} target="_blank">
           <button>Git repository</button>
         </Link>
-      </div>
+      </div> */}
 
       <section className='mentions-footer'>
         <ul><li>React / Node</li></ul>
