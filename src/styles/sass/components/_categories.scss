@@ -1,0 +1,54 @@
+  .categories{
+    display: flex;
+    overflow-y: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+    & h2{
+      // font-family: "Moirai One", cursive;
+      position: absolute;
+      bottom: 15%;
+      left: 4%;
+    }
+    .carousel-arrow{
+      background: hsla(0,0%,8%,.5);
+      position: absolute;
+      height: 100%;
+      z-index: 20;
+      & img{
+        width: 3rem;
+        filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+        top: 30%;
+        position: relative;
+        cursor: pointer;
+      }
+    }
+    .slider {
+      display: flex;           /* items en ligne */
+      overflow-x: auto;        /* permet le scroll horizontal */
+      scroll-behavior: smooth; /* défilement smooth */
+      -webkit-overflow-scrolling: touch;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
+    .category{
+      cursor: pointer;
+      &_container{
+        position: relative;
+        & img{
+          height: 130px;
+          width: 250px;
+          object-fit: cover;
+          padding-right: 0.5rem;
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
+          @media (max-width: 600px){
+            width: 100%;
+          }
+        }
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+

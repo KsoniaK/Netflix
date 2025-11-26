@@ -1,0 +1,185 @@
+.nav_container{
+  display: flex;
+  align-items: center;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  /* Mobile */
+  @media (max-width: 600px) { 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  /* Tablette */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .nav_logo{
+    & img{
+      width: 7rem;
+    }
+  }
+  .nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Mobile */
+    @media (max-width: 600px) { 
+      justify-content: space-around;
+    }
+    /* Tablette */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      justify-content: end;
+    }
+    &_menu{
+      display: flex;
+      justify-content: space-around;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        display: none;
+      }
+      /* Tablette */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        display: none;
+      }
+      & a{
+        text-decoration: none;
+        margin-right: 1rem;
+      }
+      .nav_name{
+        list-style-type: none;
+        color: #e5e5e5;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+    &_profil{
+      display: flex;
+      align-items: center;
+      width: 20%;
+      justify-content: space-evenly;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        width: 100%;
+        justify-content: end;
+      }
+      /* Tablette */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        width: 30%;
+      }
+      .nav_search{
+        display: flex;
+        @media (max-width: 600px) { 
+          display: none;
+        }
+        & input{
+          border: 1px solid white;
+          margin-left: -10rem;
+          margin-right: 1rem;
+          display: none;
+          // height: 2rem;
+          background-color: black;
+          color: white;
+        }
+      }
+      .total-likes{
+      /* Mobile */
+      @media (max-width: 600px) { 
+        display: flex;
+        margin-right: 1rem;
+        align-items: center;
+      }
+      }
+      & p{
+        margin-right: 1rem;
+      }
+      &-img{
+        filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+        width: 1.3rem!important;
+        margin-right: .5rem;
+      }
+      & img{
+        width: 2rem;
+        @media (max-width: 600px){
+          width: 2.5rem;
+        }
+      }
+      .nav_tools{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 1rem;
+        &:hover ~ .nav_tools-details{
+          display: block;
+          transform: scale(1.15);
+        }
+        &:hover > .nav_tools-img{
+          transform: rotate(180deg);
+        }
+        &-img{
+          filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+          width: .5rem;
+          margin-left: .5rem;
+          @media (max-width: 600px){
+            display: none;
+          }
+        }
+      }
+    }
+    &_tools-details{
+      background-color: black;
+      position: fixed;
+      top: 6%;
+      right: 5%;
+      display: none;
+      transition-property: transform;
+      transition-duration: 1000ms;
+      & ul{
+      list-style: none;
+      padding-left: 1rem;
+      padding-right: 3rem;
+      margin-bottom: 0;
+      & a{
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+        & li{
+          display: flex;
+          align-items: center;
+          padding-bottom: 1rem;
+          & img{
+            width: 1.5rem;
+            height: 1.5rem;
+            filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+            padding-right: 1rem;
+          }
+          & p{
+            margin: 0;
+          }
+        }
+      }
+      .connexion_nature{
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        & a{
+          padding-top: 1rem;
+          justify-content: center;
+          text-decoration: none;
+        }
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      &:hover{
+        display: block;
+      }
+    }
+  }
+}
+.active{
+  display: block;
+}

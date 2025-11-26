@@ -1,0 +1,168 @@
+{
+  "users": [
+    {
+      "userId": 1,
+      "name": "Sonia",
+      "lastName": "Kechit"
+    }
+  ],
+  "projets":{
+    "categories":[
+      {
+        "id": 1,
+        "name": "Javascript"
+      },
+      {
+        "id": 2,
+        "name": "HTML/CSS/SASS"
+      },
+      {
+        "id": 3,
+        "name": "React/Node"
+      },
+      {
+        "id": 4,
+        "name": "CMS"
+      },
+      {
+        "id": 5,
+        "name": "Gestion de projet"
+      }
+    ],
+    "medias":[
+      {
+        "mediaId": 1,
+        "id": 1,
+        "title": "GameOn",
+        "picture": "/imgProjets/gameOn.jpg",
+        "pictureCategory": "/imgProjets/gameOn_category.png",
+        "resume": "GameOn est une entreprise spécialisée dans les conférences et les concours de jeux. Pour ce projet, je devais reprendre la main sur un projet en cours. Jason, le développeur Front-End en charge du projet",
+        "tags": ["HTML,", " CSS,", " Javascript"],
+        "url": "https://ksoniak.github.io/GameOn-website-FR/"
+      },
+      {
+        "mediaId": 2,
+        "id": 1,
+        "title": "WebForceGame",
+        "picture": "/imgProjets/wfg.jpg",
+        "pictureCategory": "/imgProjets/wfg_category.png",
+        "resume": "Création d'un site pour le projet de fin de stage d'Intégratrice web. WebForceGame est un site permettant aux personnes seules (ou non) de jouer en ligne !",
+        "tags": ["HTML,", " CSS,", " Javascript"],
+        "url": "https://ksoniak.github.io/Web-force-game/"
+
+      },
+      {
+        "mediaId": 3,
+        "id": 1,
+        "title": "PLS Avocat",
+        "picture": "/imgProjets/plsAvocat.jpg",
+        "pictureCategory": "/imgProjets/plsAvocat_category.png",
+        "resume": "Création d'un site vitrine pour un cabinet d'avocats",
+        "tags": ["HTML,", " CSS,", " Javascript"],
+        "url": "https://www.pls-avocat.fr/"
+
+      },
+      {
+        "mediaId": 4,
+        "id": 1,
+        "title": "Disney chanel",
+        "picture": "/imgProjets/disney_category.png",
+        "pictureCategory": "/imgProjets/disney_category.png",
+        "resume": "Reproduction du site Disney chanel !",
+        "tags": ["HTML,", " CSS,", " Javascript"],
+        "url": "https://ksoniak.github.io/projet_disney/"
+
+      },
+      {
+        "mediaId": 5,
+        "id": 1,
+        "title": "FishEye",
+        "picture": "/imgProjets/fishEye.png",
+        "pictureCategory": "/imgProjets/fishEye_category.png",
+        "resume": "FishEye. FishEye est un site web qui permet aux photographes indépendants de présenter leurs meilleurs travaux. Notre objectif est de construire un prototype fonctionnel d'un nouveau site web",
+        "tags": ["HTML,", " CSS,", " Javascript"],
+        "url": "https://ksoniak.github.io/SoniaKechit_6_09112021/"
+      },
+      {
+        "mediaId": 6,
+        "id": 1,
+        "title": "Les petits plats",
+        "picture": "/imgProjets/lesPetitsPlats.jpg",
+        "pictureCategory": "/imgProjets/lesPetitsPlats_category.png",
+        "resume": "Je suis freelance et je viens d’être missionnée par l’entreprise “Les petits plats” en temps que Développeuse Front-end. L’entreprise a décidé de réaliser son propre site de recettes de cuisine à l’instar de Marmiton ou 750g.",
+        "tags": ["HTML,", " CSS,", " Javascript"],
+        "url": "https://ksoniak.github.io/SoniaKechit_7_09082022/"
+      },
+      {
+        "mediaId": 7,
+        "id": 2,
+        "title": "Réservia",
+        "picture": "/imgProjets/reservia.png",
+        "pictureCategory": "/imgProjets/reservia_category.png",
+        "resume": "L' entreprise décide de réaliser un prototype. La première étape consiste à intégrer la maquette responsive en HTML et CSS. Voici donc la tâche qui m’a été attribuée !",
+        "tags": ["HTML,", " CSS"],
+        "url": "https://ksoniak.github.io/SoniaKechit_2_26052021/"
+      },
+      {
+        "mediaId": 8,
+        "id": 2,
+        "title": "OhMyFood",
+        "picture": "/imgProjets/ohMyFood.jpg",
+        "pictureCategory": "/imgProjets/ohMyFood_category.png",
+        "resume": "Ohmyfood! est une entreprise de commande de repas en ligne. le site sera développé en utilisant l’approche mobile-first. Pour cette raison, seules des maquettes mobiles seront réalisées.",
+        "tags": ["HTML,", " CSS,", " SASS"],
+        "url": "https://ksoniak.github.io/SoniaKechit_3_29062021/"
+      },
+      {
+        "mediaId": 9,
+        "id": 3,
+        "title": "Kasa",
+        "picture": "/imgProjets/kasa.jpg",
+        "pictureCategory": "/imgProjets/kasa_category.png",
+        "resume": "Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans. Elle souhaite une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté Back-end, et React côté Front-end",
+        "tags": ["HTML,", " CSS,", " REACT"],
+        "url": "https://ksoniak.github.io/Kechit_Sonia_Kasa_11-2022/"
+      },
+      {
+        "mediaId": 10,
+        "id": 3,
+        "title": "Coding challenge",
+        "picture": "/imgProjets/codingChallenge.png",
+        "pictureCategory": "/imgProjets/codingChalenge_category.png",
+        "resume": "Initiation à la création d'une base de données (MySQL via phpMyAdmin), deployer un projet sur GitHub Pages (client + serveur)",
+        "tags": ["HTML,", " CSS,", " REACT,", " NODE"],
+        "url": " https://ksoniak.github.io/BDD-Challenge_client/"
+      },
+      {
+        "mediaId": 11,
+        "id": 4,
+        "title": "OQTF",
+        "picture": "/imgProjets/oqtf.jpg",
+        "pictureCategory": "/imgProjets/oqtf_category.png",
+        "resume": "Création d'un site vitrine pour une entreprise spécialisée dans l'accompagnement en droit des étrangers",
+        "tags": ["CMS,", " Wordpress"],
+        "url": "https://oqtf-plsavocat.fr/"
+      },
+      {
+        "mediaId": 12,
+        "id": 5,
+        "title": "LearnHome",
+        "picture": "/imgProjets/learnHome.png",
+        "pictureCategory": "/imgProjets/learnHome_category.png",
+        "resume": "LearnHome est une association qui met en relation des enfants en diﬃculté scolaire avec des tuteurs bénévoles. Elle souhaite travailler avec nous sur toute la conception de son site web",
+        "tags": ["Maquette,", " Diagramme,", " User stories,", " Kanban"],
+        "url": "Definir-les-besoins-pour-une-application-de-soutien-scolaire.pdf"
+      },
+      {
+        "mediaId": 13,
+        "id": 4,
+        "title": "WebsiteCreate",
+        "picture": "/imgProjets/websiteCreate.png",
+        "pictureCategory": "/imgProjets/websiteCreate_category.png",
+        "resume": "WebsiteCreate est une entreprise freelance de création de sites internet. Elle est spécialisée dans la création de sites pour les avocats",
+        "tags": ["CMS,", " Wordpress"],
+        "url": "https://websitecreate.fr"
+      }
+    ]
+  }
+}
