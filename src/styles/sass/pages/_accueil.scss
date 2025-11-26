@@ -115,6 +115,6 @@ main{
   display: flex;
   /* Mobile */
   @media (max-width: 600px) { 
-    overflow-y: none;
+    overflow-y: hidden;
   }
 }
