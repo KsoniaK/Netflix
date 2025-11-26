@@ -19,7 +19,7 @@ function Logo() {
       </section>
 
       <section className='login-description'>
-        <h1>Projets en illimité, et bien plus</h1>
+        <h1>Projets en illimité, <br/> et bien plus</h1>
         <span>La visite est gratuite !</span>
         <p>Prêt(e) à voir mon Portfolio ? Appuyez sur "S'identifier"</p>
       </section>
