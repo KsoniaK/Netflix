@@ -24,7 +24,7 @@ main{
       display: flex;
       /* Mobile */
       @media (max-width: 600px) { 
-        bottom: 30%;
+        bottom: 25%;
         right: 0%;
         width: 50%;
       }
@@ -86,6 +86,10 @@ main{
       background: hsla(0, 0%, 8%, 0.5);
       display: none;
       cursor: pointer;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        display: none;
+      }
       & img{
         width: 2rem;
         filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
