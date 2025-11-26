@@ -66,6 +66,10 @@ main{
     padding: 0 0 0 4%;
     &:hover .right{
       display: flex;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        display: none;
+      }
     }
     &:hover .left{
       display: flex;
