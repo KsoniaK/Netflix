@@ -15,7 +15,7 @@ function Categories({ medias, onMediaClick }){
           >
             <img
               className="img-projet"
-              src={media.pictureCategory}
+              src={process.env.PUBLIC_URL + media.pictureCategory}
               alt={media.title}
             />
           </div>
