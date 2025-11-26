@@ -113,10 +113,9 @@ main{
 }
 #liste-media{
   display: flex;
-  // @media (max-width: 600px){
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
+  /* Mobile */
+  @media (max-width: 600px) { 
+    display: none;
     overflow-y: hidden;
-  //   padding-right: .5rem;
-  // }
+  }
 }
