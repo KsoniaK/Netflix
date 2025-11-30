@@ -12,7 +12,7 @@ function Profil({users}){
             <h1 className="main-profil-h1">Portfolio de ?</h1>
               <UserLogin users={users}/>
               <Link to={'/'}>
-                <button className='main-profil-button'>Accueil</button>
+                <button className='main-profil-button'>Retour</button>
               </Link>
         </section>
     </main>
