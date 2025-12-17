@@ -156,12 +156,12 @@
       {
         "mediaId": 13,
         "id": 4,
-        "title": "WebsiteCreate",
+        "title": "C dans la Toile",
         "picture": "/imgProjets/websiteCreate.png",
         "pictureCategory": "/imgProjets/websiteCreate_category.png",
-        "resume": "WebsiteCreate est une entreprise freelance de création de sites internet. Elle est spécialisée dans la création de sites pour les avocats",
+        "resume": "C dans la Toile est une entreprise freelance de création de sites internet. Elle est spécialisée dans la création de sites pour les avocats",
         "tags": ["CMS,", " Wordpress"],
-        "url": "https://websitecreate.fr"
+        "url": "https://c-dans-la-toile.fr"
       }
     ]
   }
