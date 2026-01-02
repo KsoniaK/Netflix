@@ -29,37 +29,14 @@
       font-size: 10vw;
     }
   }
-  .profils{
-    .profil{
-      img{
-        height: 10vw;
-        width: 10vw;
-        /* Mobile */
-        @media (max-width: 600px){ 
-          height: 30vw;
-          width: 30vw;
-        }
-      }
-      h2{
-        font-size: 1.2rem;
-      }
+  .back-to-logo{
+    filter: invert(35%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+    width: 10%;
+    margin-top: 1rem;
+    &:hover{
+      filter: invert(95%) sepia(100%) saturate(19%) hue-rotate(357deg) brightness(106%) contrast(105%);
+      cursor: pointer;
     }
-  }
-  &-button{
-    border: 1px solid white;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 1.2vw;
-    margin: 2em 0 1em;
-    padding: 0.5em 1.5em;
-    color: grey;
-    /* Mobile */
-    @media (max-width: 600px) { 
-      font-size: 4vw;
-    }
-      &:hover{
-        color: white;
-      }
   }
 }
 

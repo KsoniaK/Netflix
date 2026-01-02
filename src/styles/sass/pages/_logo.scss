@@ -17,6 +17,20 @@
     // top: 40%;
     // left: 21%;
     text-align: center;
+    & button{
+      background-color: #E50815;
+      border-radius: 4px;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      cursor: pointer;
+      border: none;
+      margin-right: 0.5rem;
+      color: white;
+      font-weight: bold;
+      font-size: initial;
+    }
       /* Mobile */
     @media (max-width: 600px) { 
       top: 25%;
