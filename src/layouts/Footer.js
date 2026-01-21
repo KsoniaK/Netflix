@@ -20,7 +20,7 @@ function Footer() {
           <img src={img("github2.png")} alt='gitHub' />
         </Link>
         <div>
-          <Link to={'https://github.com/KsoniaK/PortfolioNetflix'} target="_blank">
+          <Link to={'https://github.com/KsoniaK/Netflix.git'} target="_blank">
             <button>Git repository</button>
           </Link>
         </div>
