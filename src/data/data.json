@@ -38,7 +38,7 @@
         "pictureCategory": "/imgProjets/gameOn_category.png",
         "resume": "GameOn est une entreprise spécialisée dans les conférences et les concours de jeux. Pour ce projet, je devais reprendre la main sur un projet en cours. Jason, le développeur Front-End en charge du projet",
         "tags": ["HTML,", " CSS,", " Javascript"],
-        "url": "https://ksoniak.github.io/GameOn-website-FR/"
+        "url": "https://ksoniak.github.io/GameOn/"
       },
       {
         "mediaId": 2,
@@ -48,7 +48,7 @@
         "pictureCategory": "/imgProjets/wfg_category.png",
         "resume": "Création d'un site pour le projet de fin de stage d'Intégratrice web. WebForceGame est un site permettant aux personnes seules (ou non) de jouer en ligne !",
         "tags": ["HTML,", " CSS,", " Javascript"],
-        "url": "https://ksoniak.github.io/Web-force-game/"
+        "url": " https://ksoniak.github.io/WebForceGame/"
 
       },
       {
@@ -70,7 +70,7 @@
         "pictureCategory": "/imgProjets/disney_category.png",
         "resume": "Reproduction du site Disney chanel !",
         "tags": ["HTML,", " CSS,", " Javascript"],
-        "url": "https://ksoniak.github.io/projet_disney/"
+        "url": "https://ksoniak.github.io/Disney/"
 
       },
       {
@@ -81,7 +81,7 @@
         "pictureCategory": "/imgProjets/fishEye_category.png",
         "resume": "FishEye. FishEye est un site web qui permet aux photographes indépendants de présenter leurs meilleurs travaux. Notre objectif est de construire un prototype fonctionnel d'un nouveau site web",
         "tags": ["HTML,", " CSS,", " Javascript"],
-        "url": "https://ksoniak.github.io/SoniaKechit_6_09112021/"
+        "url": "https://ksoniak.github.io/FishEye/"
       },
       {
         "mediaId": 6,
@@ -91,7 +91,7 @@
         "pictureCategory": "/imgProjets/lesPetitsPlats_category.png",
         "resume": "Je suis freelance et je viens d’être missionnée par l’entreprise “Les petits plats” en temps que Développeuse Front-end. L’entreprise a décidé de réaliser son propre site de recettes de cuisine à l’instar de Marmiton ou 750g.",
         "tags": ["HTML,", " CSS,", " Javascript"],
-        "url": "https://ksoniak.github.io/SoniaKechit_7_09082022/"
+        "url": "https://ksoniak.github.io/LesPetitsPlats/"
       },
       {
         "mediaId": 7,
@@ -101,7 +101,7 @@
         "pictureCategory": "/imgProjets/reservia_category.png",
         "resume": "L' entreprise décide de réaliser un prototype. La première étape consiste à intégrer la maquette responsive en HTML et CSS. Voici donc la tâche qui m’a été attribuée !",
         "tags": ["HTML,", " CSS"],
-        "url": "https://ksoniak.github.io/SoniaKechit_2_26052021/"
+        "url": "https://ksoniak.github.io/Reservia/"
       },
       {
         "mediaId": 8,
@@ -111,7 +111,7 @@
         "pictureCategory": "/imgProjets/ohMyFood_category.png",
         "resume": "Ohmyfood! est une entreprise de commande de repas en ligne. le site sera développé en utilisant l’approche mobile-first. Pour cette raison, seules des maquettes mobiles seront réalisées.",
         "tags": ["HTML,", " CSS,", " SASS"],
-        "url": "https://ksoniak.github.io/SoniaKechit_3_29062021/"
+        "url": "https://ksoniak.github.io/OhMyFood/"
       },
       {
         "mediaId": 9,
@@ -121,7 +121,7 @@
         "pictureCategory": "/imgProjets/kasa_category.png",
         "resume": "Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans. Elle souhaite une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté Back-end, et React côté Front-end",
         "tags": ["HTML,", " CSS,", " REACT"],
-        "url": "https://ksoniak.github.io/Kechit_Sonia_Kasa_11-2022/"
+        "url": "https://ksoniak.github.io/Kasa/"
       },
       {
         "mediaId": 10,
