@@ -12,6 +12,11 @@
         .nav_logo{
           & img{
             width: 100%;
+
+            /* Mobile */
+          @media (max-width: 600px) { 
+            width: 70%;
+          }
           }
         }
         & button{

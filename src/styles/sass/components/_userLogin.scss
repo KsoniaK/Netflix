@@ -9,6 +9,11 @@
       width: 10vw;
       object-fit: cover;
       border-radius: 4px;
+      /* Mobile */
+      @media (max-width: 600px) { 
+        height: 25vw;
+        width: 25vw;
+      }
     }
     h2{
       color: grey;

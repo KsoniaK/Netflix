@@ -12,8 +12,9 @@
 }
 .login-description{
     position: absolute;
+    width: 60%;
     top: 30%;
-    left: 32%;
+    left: 20%;
     // top: 40%;
     // left: 21%;
     text-align: center;
@@ -30,18 +31,6 @@
       color: white;
       font-weight: bold;
       font-size: initial;
-    }
-      /* Mobile */
-    @media (max-width: 600px) { 
-      top: 25%;
-      left: 0%;
-      margin: 2rem;
-    }
-      /* Tablette */
-    @media (min-width: 601px) and (max-width: 1024px) { 
-      top: 30%;
-      left: 20%;
-      width: 60%;
     }
     & h1{
       font-size: 3.5rem;
